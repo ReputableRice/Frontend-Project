@@ -1,10 +1,10 @@
 import './App.css'
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import About from './Pages/About/about';
 import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
+import About from './Pages/About/about';
 
 function App() {
 
