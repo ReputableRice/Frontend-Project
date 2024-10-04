@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
-import About from './Pages/About/about';
+import About from './Pages/About/About';
 
 function App() {
 
