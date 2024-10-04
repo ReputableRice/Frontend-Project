@@ -1,18 +1,37 @@
 .navBar {
-    margin-bottom: 5rem;
+    margin-bottom: 1.875rem;
+    width: 100vw;
+    height: 5rem;
+    
+    display: flex;
+    justify-content:baseline;
+    
+}
+
+.navBarCategories {
+    display: flex;
+    flex-direction: row;
+    margin-left: 13.177vw;
 }
 
 .appRouter {
     display: inline-block;
     text-decoration: none;
     color: var(--white);
-    width: 10rem;
+    min-width: 7.813vw;
+    margin-right: 1vw;
+    margin-top: auto;
 
     transition: cubic-bezier(.18,.69,.23,.99) 0.5s;
 }
 
+body .content {
+    margin: 0 8.438vw;
+    width: 100%;
+}
+
 .appRouter:hover {
     color: var(--n-green);
-    transform: scale(1.1);
+    transform: scale(1.1) translateX(1rem);
     filter: drop-shadow(0 0 0.1rem var(--black));
 }

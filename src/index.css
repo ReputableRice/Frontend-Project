@@ -5,9 +5,8 @@
 }
 
 :root {
-  font-family: SDK_US_Web, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: SDK_US_Web, Inter, system-ui, Avenir, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
   font-size: 16pt;
 
   color-scheme: light dark;
@@ -32,8 +31,8 @@ h1 {
 }
 
 body {
-  margin: 3.958vw;
+  /* margin: 3.958vw; */
   display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 80vh;
+  margin: 0;
 }
