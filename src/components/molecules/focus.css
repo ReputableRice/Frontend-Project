@@ -4,8 +4,8 @@
 
 .focus-container{
     flex-direction: column;
-    width: 45%;
-    align-items: center;
+    /* width: 45%; */
+    align-items: center;    
 }
 
 .focus-song{

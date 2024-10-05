@@ -4,7 +4,6 @@
 
 .playlist-container{
     flex-direction: column;
-    width: 45%;
 }
 
 .playlist-song-container{
@@ -33,6 +32,6 @@
 }
 
 .song-title{
-
+    font-size: 1.3rem;
 }
 

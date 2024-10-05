@@ -39,4 +39,41 @@ body .content {
 
 .main-container{
     display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    height: 55rem;
+    width: 35rem;
+    
+    overflow-y: scroll; /* Enables vertical scrolling */
+    position: relative; /* Ensures correct positioning */
+    direction: rtl; /* Switches content flow direction */
+
+    background: linear-gradient(to bottom, transparent, #242424);
+}
+
+.left-container > * {
+    direction: ltr; /* Resets content direction */
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.left-container::-webkit-scrollbar {
+    width: 0.5rem; /* Scrollbar width */
+    position: absolute;
+    left: 0; /* Ensures scrollbar appears on the left */
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    background-color: darkgray; /* Scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+.left-container::-webkit-scrollbar-track {
+    background: transparent; /* Background of the track */
+}
+
+
+.right-container{
+    width: 45rem;
 }

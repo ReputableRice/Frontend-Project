@@ -21,8 +21,12 @@ export default function Home() {
                 <div className='content'>
                     <div>Home</div>
                     <div className='main-container'>
-                        <Song handleSongClick={handleSongClick} />
-                        <Focus selectedSong={selectedSong} />
+                        <div className='left-container'>
+                            <Song handleSongClick={handleSongClick} /> 
+                        </div>
+                        <div className='right-container'>
+                            <Focus selectedSong={selectedSong} />
+                        </div>
                     </div>
                 </div>
             </body>
