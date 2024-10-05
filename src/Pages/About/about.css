@@ -1,0 +1,13 @@
+.aboutBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faqHeading {
+    font-size: var(--h1);
+}
+
+p {
+    text-wrap: wrap;
+    max-width: 39.063vw;
+}
