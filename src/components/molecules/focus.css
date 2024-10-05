@@ -1,0 +1,44 @@
+.flex{
+    display: flex;
+}
+
+.focus-container{
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+}
+
+.focus-song{
+    flex-direction: column;
+
+}
+
+.focus-image{
+    /* width: 44rem; */
+    height: 44rem;
+    border-radius: 1rem;
+    justify-content: center;
+    background-color: #555;
+
+}
+
+.focus-info{
+    flex-direction: column;
+    padding: 0.3rem;
+    margin-top: 1rem;
+
+    border-radius: 1rem;
+
+    background-color: #555;
+
+}
+
+.focus-item{
+    margin: 0;
+    
+}
+
+.focus-title{
+    font-size: 2rem;
+}
+
