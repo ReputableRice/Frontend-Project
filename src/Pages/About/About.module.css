@@ -1,0 +1,8 @@
+.aboutLayout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutDescription {
+    max-width: 54.6875rem;
+}
