@@ -15,8 +15,7 @@ export default function Card() {
                     </div>
                     <div className={styles.cardLine}></div>
                     <p className={styles.cardText}>
-                        Lorem Ipsum Lorem Ipsum  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum                         Lorem Ipsum Lorem Ipsum  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec.
                     </p>
                 </div>
             </div>
