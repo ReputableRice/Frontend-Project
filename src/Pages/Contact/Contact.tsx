@@ -6,7 +6,22 @@ export default function Contact() {
         <>
             <body>
                 <div className='content'>
-                    <div>Contact</div>
+                    <h1>Contact Us!</h1>
+                    <form>
+                        <div className='flex-col'>
+                        <label for="email">Email:</label>
+                        <input type='text' id='email' name='email'/>
+                        </div>
+                        <div>
+                        <label for="subject">Subject:</label>
+                        <input type='text' id='subject' name='subject'/>
+                        </div>
+                        <div>
+                        <label for="message">Subject:</label>
+                        <input type='text' id='message' name='message'/>
+                        </div>
+                    </form>
+                    <h1>We're also here!</h1>
                 </div>
             </body>
         </>
