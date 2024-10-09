@@ -1,5 +1,6 @@
 import React from 'react'
 import Styles from "./Contact.module.css"
+import { SocialIcon } from 'react-social-icons'
 
 export default function Contact() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
@@ -24,7 +25,18 @@ export default function Contact() {
                         </div>
                         <button className={Styles.btnSend}>Send</button>
                     </form>
-                    <h1>We're also here!</h1>
+                    <div className='mt-5'>
+                        <h1 className=''>We're also here!</h1>
+                        <div className='mt-3'>
+                            <SocialIcon url="https://x.com" bgColor='none' />
+                            <SocialIcon url="https://tiktok.com" bgColor='none' />
+                            <SocialIcon url="https://twitch.tv" bgColor='none' />
+                            <SocialIcon url="https://youtube.com" bgColor='none' />
+                            <SocialIcon url="https://instagram.com" bgColor='none' />
+                            <SocialIcon url="https://spotify.com" bgColor='none' />
+                        </div>
+                    </div>
+
                 </div>
             </body>
         </>
