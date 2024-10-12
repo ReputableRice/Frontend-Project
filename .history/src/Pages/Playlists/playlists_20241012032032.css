@@ -25,8 +25,7 @@ h1 {
 .playlist-item {
     background-color:#555;
     border: 5px solid var(--black);
-    border-radius: 25px 25px 0 25px;
-    height:40vh;
+    border-radius: 25px;
     overflow: hidden;
     transition: 0.3s ease;
     box-shadow: 0px 5px 8px var(--black);
@@ -43,7 +42,6 @@ h1 {
 }
 
 .playlist-details {
-    margin-top: 20px;
     padding: 20px;
 }
 
