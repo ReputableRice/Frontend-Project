@@ -23,7 +23,10 @@
     flex-direction: column;
     /* justify-content: space-between; */
     padding: 0.3rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+
+    max-width: 100%;
+
 }
 
 .song-item{
@@ -33,5 +36,21 @@
 
 .song-title{
     font-size: 1.3rem;
+
+    margin-top: 0.7rem;
+}
+
+.song-author{
+    font-weight: 700;
+
+    margin-top: 0.5rem;
+}
+
+.song-link{
+    font-size: 0.8rem;
+
+    margin-top: 2rem;
+    text-decoration: underline;
+    text-decoration-color: var(#555)
 }
 
