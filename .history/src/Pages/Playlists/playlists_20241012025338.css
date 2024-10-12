@@ -19,7 +19,7 @@ h1 {
     padding-top:5px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 10px;
 }
 
 .playlist-item {
@@ -31,6 +31,11 @@ h1 {
 
 .playlist-item:hover {
     color: var(--n-green);
+ ;
+}
+
+.playlist-item:clicked {
+    border:5px solid var(--black) ;
 }
 
 .playlist-image {
