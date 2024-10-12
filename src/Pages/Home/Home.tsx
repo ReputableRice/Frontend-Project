@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
 import { songs } from '../../data/dummy';
+import Preloader from '../../components/templates/Preloader/Preloader';
 
 import '../../../src/App.css';
 
@@ -29,6 +30,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <Preloader />
             </body>
         </>
     );

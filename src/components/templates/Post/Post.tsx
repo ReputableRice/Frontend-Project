@@ -1,4 +1,5 @@
 import "./Post.css"
+import React from 'react';
 import Image from "react"
 
 export default function Post() {
