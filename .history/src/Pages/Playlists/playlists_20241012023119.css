@@ -22,22 +22,10 @@ h1 {
     gap: 20px;
 }
 
-.playlist-item {
-    background-color:var(--grey);
+.playlist-card {
+    background-color: #2a2a2a;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2);
-}
-
-.playlist-image {
-    width: 100%;
-}
-
-.playlist-details {
-    padding: 10px;
-}
-
-.playlist-details p {
-    font-size: 14px;
-    color: #b3b3b3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }

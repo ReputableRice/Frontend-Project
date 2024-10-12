@@ -22,15 +22,11 @@ h1 {
     gap: 20px;
 }
 
-.playlist-item {
-    background-color:var(--grey);
+.playlist-card {
+    background-color: #2a2a2a;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2);
-}
-
-.playlist-image {
-    width: 100%;
+    box-shadow: 0px 30px 8px rgba(0, 0, 0, 0.2);
 }
 
 .playlist-details {

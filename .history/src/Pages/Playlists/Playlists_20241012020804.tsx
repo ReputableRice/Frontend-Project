@@ -1,7 +1,6 @@
 import React from 'react'
 import './playlists.css'
 import { songs } from '../../data/dummy';
-import Playlist from './Playlist'
 
 export default function Playlists() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
@@ -9,13 +8,11 @@ export default function Playlists() {
         <>
             <body>
                 <div className='content'>
-                    <p>Playlists</p>
+                    <h1>Playlists</h1>
                     <div className="playlist-container">
-                        <div className="playlist-grid">
-                            {songs.map((song, index) => (
-                                <Playlist key={index} artist={song} />
-                            ))}
-                        </div>
+                        {songs.map((song, index) => (
+                            <Playlist key={index} artist={song} />
+                        ))}
                     </div>
                 </div>
             </body>
