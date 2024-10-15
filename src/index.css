@@ -4,6 +4,7 @@
 
 @import "tailwindcss/utilities";
 
+
 @font-face {
   font-family: "SDK_US_Web";
   src: local("SDK_US_Web"),
@@ -30,6 +31,8 @@
   --n-green: #E6FE5D;
   --red: #F70306;
   --d-grey: #353837;
+
+  --h1: 1.5rem
 }
 
 h1 {
