@@ -9,13 +9,11 @@ export default function Playlists() {
         <>
             <body>
                 <div className='content'>
-                    <p>Playlists</p>
+                    <h1>Playlists</h1>
                     <div className="playlist-container">
-                        <div className="playlist-grid">
-                            {songs.map((song, index) => (
-                                <Playlist key={index} artist={song} />
-                            ))}
-                        </div>
+                        {songs.map((song, index) => (
+                            <Playlist key={index} artist={song} />
+                        ))}
                     </div>
                 </div>
             </body>
