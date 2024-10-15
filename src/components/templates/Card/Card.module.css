@@ -1,0 +1,68 @@
+.cardRelative {
+    margin: 0 0 0 19.688vw;
+}
+
+.cardContainer {
+    background-color: blue;
+    min-width: 300px;
+    max-width: 338px;
+    border: 8px var(--black) solid;
+    border-radius: 16px 16px 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    height: ;
+}
+
+.cardInformation {
+    background-color: var(--d-grey);
+    border-radius: 0 0 0 8px;
+}
+
+.cardImage {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.cardNameContainer {
+    display: flex;
+    align-items: end;
+    margin: 22px;
+    display: flex;
+
+    position: relative;
+    overflow-x: hidden;
+    top: -60px;
+}
+
+.cardProfile {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 4.625rem;
+    width: 4.625rem;
+
+    border: 4px solid var(--d-grey);
+}
+
+.cardName {
+    margin: 0 0 13px 15px;
+}
+
+.cardLine {
+    width: 208px;
+    height: 5px;
+    background-color: var(--grey);
+}
+
+.cardLine {
+    margin-left: 22px;
+    top: -60px;
+    position: relative;
+}
+
+.cardText {
+    padding: 22px;
+    margin: 0;
+    top: -60px;
+    position: relative;
+}
