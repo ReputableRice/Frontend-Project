@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../../components/templates/Card/Card'
 import Styles from './About.module.css'
 
+
 export default function About() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
     return (
