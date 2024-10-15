@@ -12,6 +12,7 @@ export default function Song({ handleSongClick }) {
                     <div className='song-info flex'>
                         <p className='song-item song-title'>{song.title}</p>
                         <p className='song-item song-author'>{song.author}</p>
+                        {/* <p className='song-item song-author'>{song.date}</p> */}
                         <p className='song-item song-link'>
                             <a href={song.song_link} target="_blank" rel="noopener noreferrer">Listen</a>
                         </p>

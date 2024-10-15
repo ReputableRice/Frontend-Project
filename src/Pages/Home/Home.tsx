@@ -19,9 +19,10 @@ export default function Home() {
         <>
             <body>
                 <div className='content'>
-                    <div>Home</div>
+                    {/* <div>Home</div> */}
                     <div className='main-container'>
                         <div className='left-container'>
+                            <div className='filter'></div>
                             <Song handleSongClick={handleSongClick} /> 
                         </div>
                         <div className='right-container'>
