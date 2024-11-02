@@ -9,6 +9,7 @@ export default function Playlists() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
     const breakpoints = {
         default: 5,
+        1500: 3,
         1100: 2,
         700: 1,
     }
