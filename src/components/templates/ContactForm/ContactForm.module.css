@@ -1,0 +1,75 @@
+.formContainer {
+    max-width: 697px;
+    min-width: 20vw;
+    width: 36.302vw;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 30px;
+
+    border-radius: 16px 16px 0px 16px;
+    border: 4px solid var(--000000, #000);
+    background: (var(--grey), #353837);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.23);
+}
+
+
+
+.formContainer * {
+    margin: 15px 0;
+}
+
+.subhead {
+    margin: 0;
+    color: var(--grey);
+}
+
+.emailLine {
+    display: flex;
+    width: 100%;
+    padding: 13px 9px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: var(--grey, #676364);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.subjectLine {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 13px 9px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: var(--grey, #676364);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.messageLine {
+    display: flex;
+    width: 100%;
+    padding: 13px 9px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: var(--grey, #676364);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.btnSend {
+    width: 135px;
+    height: 34px;
+    padding: 6px 45px;
+
+    background-color: var(--black);
+    border-radius: 0.5rem;
+}
