@@ -1,7 +1,7 @@
 export const songs = [
     {
         title: 'American Prometheus',
-        image_link: "https://placehold.co/160x160",
+        image_link: "https://m.media-amazon.com/images/I/81z+7XjYWeL.jpg",
         author: "Ludwig Göransson",
         song_link: "https://www.youtube.com/playlist?list=PLDisKgcnAC4QJDGcv7BafiO3tqpRYrTXe",
         song_desc: "The opening track, setting a haunting and powerful tone for Oppenheimer's journey as a complex figure in history."
