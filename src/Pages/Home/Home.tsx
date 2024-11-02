@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <>
-            <body>
+            <div>
                 <div className='content'>
                     {/* <div>Home</div> */}
                     <div className='main-container'>
@@ -30,7 +30,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
         </>
     );
 }

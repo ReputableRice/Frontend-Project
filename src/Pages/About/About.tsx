@@ -7,7 +7,7 @@ export default function About() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
     return (
         <>
-            <body>
+            <div>
                 <div className='content flex flex-row'>
                     <div>
                         <h1>About Turntable</h1>
@@ -17,7 +17,7 @@ export default function About() {
                     </div>
                     <Card />
                 </div>
-            </body>
+            </div>
         </>
     )
 }

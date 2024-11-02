@@ -16,7 +16,7 @@ export default function Playlists() {
 
     return (
         <>
-            <body>
+            <div>
                 <div className='content'>
                     <h1>Playlists</h1>
                     <Masonry
@@ -28,7 +28,7 @@ export default function Playlists() {
                         ))}
                     </Masonry>
                 </div>
-            </body>
+            </div>
 
 
         </>
