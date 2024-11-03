@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-
+import "./home.css"
 import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
 import { songs } from '../../data/dummy';
-
-import '../../../src/App.css';
+import { FaPlus, FaBars, FaTrash } from "react-icons/fa";
 
 export default function Home() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
@@ -19,15 +17,17 @@ export default function Home() {
         <>
             <div>
                 <div className='content'>
-                    {/* <div>Home</div> */}
                     <div className='main-container'>
+                        <div className='playlistEdit'>
+                            <FaBars size={"2rem"} className='icon'/>
+                            <FaPlus size={"2rem"} className='icon'/>
+                        </div>
                         <div className='left-container'>
-                            <div className='filter'></div>
                             <Song handleSongClick={handleSongClick} /> 
                         </div>
-                        <div className='right-container'>
+                        {/* <div className='right-container'>
                             <Focus selectedSong={selectedSong} />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

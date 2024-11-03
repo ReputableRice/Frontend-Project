@@ -34,7 +34,6 @@
 
 .song-item{
     margin: 0;
-    
 }
 
 .song-title{
@@ -57,3 +56,6 @@
     text-decoration-color: var(#555)
 }
 
+.playlist-container {
+    margin-top: auto;
+}

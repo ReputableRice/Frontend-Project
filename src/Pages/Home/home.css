@@ -1,0 +1,43 @@
+.main-container {
+    display: flex;
+}
+.left-container {
+    height: 80vh;
+    max-height: 1080px;
+    width: 35rem;
+    display: flex;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    direction: rtl; /* Switches content flow direction */
+    background: linear-gradient(to bottom, transparent, #242424);
+
+    margin: 0 0 0 1rem ;
+}
+
+.left-container > * {
+    direction: ltr; /* Resets content direction */
+}
+
+.left-container::-webkit-scrollbar {
+    width: 0.5rem; 
+    position: absolute;
+    left: 0; 
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    background-color: darkgray; 
+    border-radius: 10px; 
+}
+
+.left-container::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.right-container {
+    height: 80vh;
+    max-height: 1080px;
+    margin-left: 2rem;
+}
+
+.icon {
+    margin: 1rem 0;
+}
