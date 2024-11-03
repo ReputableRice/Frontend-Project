@@ -4,7 +4,6 @@ import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
 import { songs } from '../../data/dummy';
 import { FaPlus, FaBars, FaTrash } from "react-icons/fa";
-import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
 export default function Home() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
