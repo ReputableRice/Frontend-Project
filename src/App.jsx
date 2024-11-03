@@ -12,12 +12,12 @@ function App() {
     <>
       <Router>
         <div className='navBar'>
-          <ul className='navBarCategories'>
-            <Link to="/" className={"appRouter"}>Home</Link>
-            <Link to="/About" className={"appRouter"}>About</Link>
-            <Link to="/Contact" className={"appRouter"}>Contact</Link>
-            <Link to="/Playlists" className={"appRouter"}>Playlists</Link>
-          </ul>
+          <div className='navBarCategories'>
+            <Link to="/" className={"appRouter navLeft"}>Home</Link>
+            <Link to="/About" className={"appRouter nav"}>About</Link>
+            <Link to="/Contact" className={"appRouter nav"}>Contact</Link>
+            <Link to="/Playlists" className={"appRouter navRight"}>Playlists</Link>
+          </div>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />

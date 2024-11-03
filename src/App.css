@@ -1,29 +1,53 @@
 .navBar {
-    margin-bottom: 1.875rem;
-    width: 100vw;
-    height: 5rem;
+    margin: 3.125rem 0 3.125rem 0;
     
-    display: flex;
-    justify-content:baseline;
     
 }
 
 .navBarCategories {
-    display: flex;
-    flex-direction: row;
     margin-left: 13.177vw;
+
+    display: flex;
 }
 
 .appRouter {
-    display: inline-block;
+    /* display: inline-block;
     text-decoration: none;
     color: var(--white);
     min-width: 7.813vw;
     margin-right: 1vw;
-    margin-top: auto;
+    margin-top: auto; */
+
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    padding: 0.5rem 2rem;
+    overflow: hidden;
 
     transition: cubic-bezier(.18,.69,.23,.99) 0.5s;
+    transform: skew(-15deg);
+
+    margin: 0.1rem;
 }
+
+.navLeft {
+    border-radius: 10rem 0 0 10rem;
+}
+
+.navRight {
+    border-radius: 0 10rem 10rem 0;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
 
 body .content {
     margin: 0 8.438vw;
@@ -31,9 +55,11 @@ body .content {
 }
 
 .appRouter:hover {
-    color: var(--n-green);
+    color: var(--black);
     transform: scale(1.1) translateX(1rem);
     filter: drop-shadow(0 0 0.1rem var(--black));
+    background-color: var(--n-green);
+    transform: skew(-15deg);
 }
 
 .main-container {

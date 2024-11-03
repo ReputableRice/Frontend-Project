@@ -17,6 +17,9 @@
 
 .song-image{
     border-radius: 1rem;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
 }
 
 .song-info{
