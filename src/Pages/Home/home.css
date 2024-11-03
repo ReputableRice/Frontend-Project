@@ -15,6 +15,7 @@
 
 .left-container > * {
     direction: ltr; /* Resets content direction */
+    overflow-x: hidden;
 }
 
 .left-container::-webkit-scrollbar {
@@ -38,6 +39,10 @@
     margin-left: 2rem;
 }
 
+.filter {
+    
+}
+
 .icon {
-    margin: 1rem 0;
+    margin: 1;
 }

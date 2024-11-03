@@ -4,6 +4,7 @@ import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
 import { songs } from '../../data/dummy';
 import { FaPlus, FaBars, FaTrash } from "react-icons/fa";
+import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
 export default function Home() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
@@ -20,14 +21,14 @@ export default function Home() {
                     <div className='main-container'>
                         <div className='playlistEdit'>
                             <FaBars size={"2rem"} className='icon'/>
-                            <FaPlus size={"2rem"} className='icon'/>
+                            <FaPlus size={"2rem"} className='icon mt-3'/>
                         </div>
                         <div className='left-container'>
                             <Song handleSongClick={handleSongClick} /> 
                         </div>
-                        {/* <div className='right-container'>
+                        <div className='right-container'>
                             <Focus selectedSong={selectedSong} />
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>

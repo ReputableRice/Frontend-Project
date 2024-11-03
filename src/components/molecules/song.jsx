@@ -16,10 +16,8 @@ export default function Song({ handleSongClick }) {
                             <p className='song-item song-author'>{song.author}</p>
                             {/* <p className='song-item song-author'>{song.date}</p> */}
                         </div>
-                        <div className='flex space-x-64 ml-4'>
-                            <p className='song-item song-link'>
-                                <a href={song.song_link} target="_blank" rel="noopener noreferrer">Listen</a>
-                            </p>
+                        <div className='flex space-x-64 ml-4 h-6'>
+                            <a href={song.song_link} className='song-item song-link' target="_blank" rel="noopener noreferrer">Listen</a>
                             <FaTrash size={"1rem"} className='icon mt-auto m-0'/>
                         </div>
                     </div>
