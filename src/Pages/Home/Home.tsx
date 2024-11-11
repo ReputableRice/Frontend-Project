@@ -3,7 +3,9 @@ import "./home.css"
 import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
 import { FaPlus, FaBars } from "react-icons/fa";
+import { CgPlayListAdd } from 'react-icons/cg';
 import { nanoid } from 'nanoid';
+import AddSong from '../../components/templates/AddSong/AddSong';
 
 export default function Home() {
     const [songs, setSongs] = useState([
@@ -30,10 +32,34 @@ export default function Home() {
             author: "Miyuna",
             song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
             song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
-        }
+        },
+        {
+            id: nanoid(),
+            title: 'みゆな - ガムシャラ【Official Music Video】',
+            image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
+            author: "Miyuna",
+            song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
+            song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
+        },
+        {
+            id: nanoid(),
+            title: 'みゆな - ガムシャラ【Official Music Video】',
+            image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
+            author: "Miyuna",
+            song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
+            song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
+        },
     ]);
 
     const [selectedSong, setSelectedSong] = useState(songs[0]);
+    const [newSong, setNewSong] = useState({
+        title: '',
+        author: '',
+        song_desc: '',
+        image_link: '',
+        song_link: ''
+    });
+    const [addSongOverlay, setAddSongOverlay] = useState(false)
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -43,13 +69,41 @@ export default function Home() {
         setSongs(songs.filter((song) => song.id !== id));
     };
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setNewSong({ ...newSong, [name]: value });
+    };
+
+    const handleAddSong = (e) => {
+        e.preventDefault();
+        const songToAdd = {
+            ...newSong,
+            id: nanoid()
+        };
+        setSongs([...songs, songToAdd]);
+        setNewSong({
+            title: '',
+            author: '',
+            song_desc: '',
+            image_link: '',
+            song_link: ''
+        });
+    };
+
+    function toggleAddSong() {
+        setAddSongOverlay(!addSongOverlay)
+    }
+
     return (
         <div className='content'>
+            {addSongOverlay ?
+                <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
+                : null}
             <div className='main-container'>
-                <div className='flex'>
-                    <div className='playlistEdit'>
-                        <FaBars size={"2rem"} className='icon' />
-                        <FaPlus size={"2rem"} className='icon mt-3' />
+                <div className='flex left-content'>
+                    <div className='playlist-icons'>
+                        <FaBars size={"2.5rem"} className='icon' />
+                        <CgPlayListAdd size={"4em"} className='icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
                         <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} />
