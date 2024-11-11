@@ -8,4 +8,16 @@ export default {
     extend: {},
   },
   plugins: [],
+  theme: {
+    screens: {
+      'sm': '414px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '820px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+    }
+  }
 }

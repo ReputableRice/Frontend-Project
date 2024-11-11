@@ -1,87 +1,55 @@
 .navBar {
-    margin-bottom: 1.875rem;
-    width: 100vw;
-    height: 5rem;
-    
-    display: flex;
-    justify-content:baseline;
-    
+    margin: 3.125rem 0 3.125rem 0;  
 }
 
 .navBarCategories {
-    display: flex;
-    flex-direction: row;
     margin-left: 13.177vw;
+    display: flex;
 }
 
 .appRouter {
-    display: inline-block;
+    /* display: inline-block;
     text-decoration: none;
     color: var(--white);
     min-width: 7.813vw;
     margin-right: 1vw;
-    margin-top: auto;
+    margin-top: auto; */
+
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    padding: 0.5rem 2rem;
+    overflow: hidden;
 
     transition: cubic-bezier(.18,.69,.23,.99) 0.5s;
+    transform: skew(-15deg);
+
+
+    font-size: 24px;
 }
 
-body .content {
-    margin: 0 8.438vw;
-    width: 100%;
+.navLeft {
+    border-radius: 10rem 0 0 10rem;
+}
+
+.navRight {
+    border-radius: 0 10rem 10rem 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .appRouter:hover {
-    color: var(--n-green);
+    color: var(--black);
     transform: scale(1.1) translateX(1rem);
     filter: drop-shadow(0 0 0.1rem var(--black));
+    background-color: var(--n-green);
+    transform: skew(-15deg) scale(1.2);
+    z-index: 5;
 }
 
-.main-container {
-    display: flex;
-    justify-content: space-between;
-}
-.left-container {
-    height: 80vh;
-    max-height: 1080px;
-    width: 35rem;
-    display: flex;
-    overflow-y: scroll; /* Enables vertical scrolling */
-    position: relative; /* Ensures correct positioning */
-    direction: rtl; /* Switches content flow direction */
-    background: linear-gradient(to bottom, transparent, #242424);
-}
-
-.left-container > * {
-    direction: ltr; /* Resets content direction */
-}
-
-.filter {
-    width: 2rem;
-    height: 2rem;
-    background-color: aliceblue;
-    position: sticky; 
-    top: 0;
-    left: 0; 
-    z-index: 1; 
-}
-
-.left-container::-webkit-scrollbar {
-    width: 0.5rem; 
-    position: absolute;
-    left: 0; 
-}
-
-.left-container::-webkit-scrollbar-thumb {
-    background-color: darkgray; 
-    border-radius: 10px; 
-}
-
-.left-container::-webkit-scrollbar-track {
-    background: transparent; 
-}
-
-.right-container {
-    height: 80vh;
-    max-height: 1080px;
-    margin-left: 2rem;
-}

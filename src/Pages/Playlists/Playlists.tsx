@@ -8,7 +8,7 @@ import Masonry from 'react-masonry-css'
 export default function Playlists() {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
     const breakpoints = {
-        default: 5,
+        default: 4,
         1500: 3,
         1100: 2,
         700: 1,
@@ -16,9 +16,7 @@ export default function Playlists() {
 
     return (
         <>
-            <div>
                 <div className='content'>
-                    <h1>Playlists</h1>
                     <Masonry
                         breakpointCols={breakpoints}
                         className="my-masonry-grid"
@@ -28,9 +26,6 @@ export default function Playlists() {
                         ))}
                     </Masonry>
                 </div>
-            </div>
-
-
         </>
     )
 }

@@ -1,12 +1,13 @@
-import styles from './Card.module.css'
+import "./card.css"
 import Image from 'react'
 import CardBottom from '../../organisms/CardBottom/CardBottom'
+import React from 'react'
 
 export default function Card() {
     return (
-        <div className={styles.cardRelative}>
-            <div className={styles.cardContainer}>
-                <img className={styles.cardImage} src='https://placehold.co/600x400' />
+        <div className="cardRelative">
+            <div className="cardContainer">
+                <img className="cardImage"src='https://placehold.co/600x400' />
                 <CardBottom />
             </div>
         </div>

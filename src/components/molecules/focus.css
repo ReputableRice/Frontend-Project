@@ -1,74 +1,102 @@
-.flex{
+.flex {
     display: flex;
 }
 
-.focus-container{
+.focus-container {
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
-.focus-song{
+.focus-song {
     flex-direction: column;
 }
 
-.focus-image{
+.focus-image {
     justify-content: center;
     background-color: #555;
-    border-radius: 1rem;
+
+    width: 696px;
+
+    height: 510px;
+    border-radius: 32px 32px 0px 32px;
+
+    overflow: hidden;
 }
 
-.focus-image-link{
-    max-height: 60vh;
-    width: 100%;
-    max-width: 60vh;
-    height: 100%;
-    /* these above control the dimensions of the focus image */
+.focus-image-link {
     object-fit: cover;
-    border-radius: 1rem;
 }
 
-.focus-info{
-    width: 100%;
-    max-width: 90vh; 
+.focus-info {
+    margin-top: 37px;
+
+    display: flex;
+    width: 696px;
+    min-height: 233px;
+    padding: 16px;
     flex-direction: column;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    height: 20vh;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
 
-    border-radius: 1rem;
-
-    background-color: #555;
+    border-radius: 16px 16px 0px 16px;
+    border: 4px solid var(--000000, #000);
+    background: var(--353837, #353837);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.23);
 }
 
-.focus-item{
-    padding-left: 1rem;    
+.focus-item {
+    padding-left: 1rem;
 }
 
-.focus-title{
+.focus-title {
     font-size: 2rem;
 }
 
-.focus-wide{
+.focus-wide {
     justify-content: space-between;
     padding-right: 2rem;
     align-items: center;
     padding-top: 0.2rem;
 }
 
-.focus-author{
+.focus-author {
     font-size: 1.3rem;
     font-weight: 900;
     margin: 0;
     padding: 0;
+
+    color: var(--grey);
 }
 
-.focus-link{
+.focus-link {
     font-size: 1rem;
     margin: 0;
 }
 
-.focus-desc{
+.focus-desc {
     margin-top: 0.6rem;
     font-size: 0.9rem;
+    max-width: 100%;
+    height: 70px;
+    overflow-y: scroll;
 }
 
+.focus-desc > * {
+    overflow-x: hidden;
+}
+
+.focus-desc::-webkit-scrollbar {
+    width: 0.5rem; 
+    position: absolute;
+    left: 0; 
+}
+
+.focus-desc::-webkit-scrollbar-thumb {
+    background-color: darkgray; 
+    border-radius: 10px; 
+}
+
+.focus-desc::-webkit-scrollbar-track {
+    background: transparent; 
+}

@@ -11,3 +11,7 @@ p {
     text-wrap: wrap;
     max-width: 39.063vw;
 }
+
+.aboutDescription {
+    max-width: 54.6875rem;
+}

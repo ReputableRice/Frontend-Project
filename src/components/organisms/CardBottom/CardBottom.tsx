@@ -1,16 +1,17 @@
-import styles from '../../templates/Card/Card.module.css'
+import '../../templates/Card/card.css'
+import React from 'react'
 
 export default function CardBottom() {
     return(
-        <div className={styles.cardInformation}>
-        <div className={styles.cardNameContainer}>
-            <img className={styles.cardProfile} src='https://placehold.co/600x400'></img>
-            <div className={styles.cardName}>
+    <div className="cardInformation">
+        <div className="cardNameContainer">
+            <img className="cardProfile" src='https://placehold.co/600x400' alt="Profile" />
+            <div className="cardName">
                 John Doe
             </div>
         </div>
-        <div className={styles.cardLine}></div>
-        <p className={styles.cardText}>
+        <div className="cardLine"></div>
+        <p className="cardText">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec.
         </p>
     </div>

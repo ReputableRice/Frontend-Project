@@ -1,0 +1,76 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 100%;
+}
+
+.left-container {
+    max-height: 880px;
+    width: 40rem;
+    overflow-y: scroll;
+    /* Enables vertical scrolling */
+    direction: rtl;
+    /* Switches content flow direction */
+    background: linear-gradient(to bottom, transparent, #242424);
+
+    margin: 0 0 0 1rem;
+}
+
+.left-container>* {
+    direction: ltr;
+    /* Resets content direction */
+    overflow-x: hidden;
+}
+
+.left-container::-webkit-scrollbar {
+    width: 0.5rem;
+    position: absolute;
+    left: 0;
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+.left-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.right-container {
+    height: 80vh;
+    max-height: 1080px;
+    margin-left: 2rem;
+}
+
+.icon {
+    margin: 1;
+}
+
+.icon:hover {
+    color: var(--n-green);
+}
+
+@media only screen and (max-width:820px) {
+    .main-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left-content {
+        flex-direction: column;
+    }
+
+    .playlist-icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .right-container {
+        height: auto;
+        margin-left: 0;
+    }
+}
