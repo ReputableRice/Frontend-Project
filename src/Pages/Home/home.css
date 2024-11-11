@@ -1,11 +1,12 @@
 .main-container {
     display: flex;
+    justify-content: space-between;
+
+    max-width: 100%;
 }
 .left-container {
-    height: 80vh;
-    max-height: 1080px;
-    width: 35rem;
-    display: flex;
+    max-height: 880px;
+    width: 40rem;
     overflow-y: scroll; /* Enables vertical scrolling */
     direction: rtl; /* Switches content flow direction */
     background: linear-gradient(to bottom, transparent, #242424);
@@ -42,3 +43,4 @@
 .icon {
     margin: 1;
 }
+

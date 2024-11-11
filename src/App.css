@@ -26,7 +26,6 @@
 
 
     font-size: 24px;
-
 }
 
 .navLeft {
@@ -43,12 +42,6 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-
-}
-
-body .content {
-    margin: 0 8.438vw;
-    width: 100%;
 }
 
 .appRouter:hover {
