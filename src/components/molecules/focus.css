@@ -100,3 +100,43 @@
 .focus-desc::-webkit-scrollbar-track {
     background: transparent; 
 }
+
+@media only screen and (max-width:820px) {
+    .focus-song {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .focus-info {    
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .focus-desc {
+        margin-top: 0.6rem;
+        font-size: 0.9rem;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .focus-image {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .focus-image {
+        width: 90%;
+    }
+    .focus-info {    
+        max-width: 90%;
+    }
+
+    .focus-song {
+        justify-content: center;
+        align-items: center;
+    }
+}

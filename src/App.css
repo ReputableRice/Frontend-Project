@@ -24,7 +24,6 @@
     transition: cubic-bezier(.18,.69,.23,.99) 0.5s;
     transform: skew(-15deg);
 
-
     font-size: 24px;
 }
 
@@ -53,3 +52,14 @@
     z-index: 5;
 }
 
+@media only screen and (max-width:820px) {
+    .navBar {
+        width: 100vw;
+    }
+
+    .navBarCategories {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+}

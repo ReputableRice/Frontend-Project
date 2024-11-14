@@ -14,9 +14,9 @@ function App() {
         <div className='navBar'>
           <div className='navBarCategories'>
             <Link to="/" className={"appRouter navLeft"}>Home</Link>
+            <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
             <Link to="/About" className={"appRouter nav"}>About</Link>
-            <Link to="/Contact" className={"appRouter nav"}>Contact</Link>
-            <Link to="/Playlists" className={"appRouter navRight"}>Playlists</Link>
+            <Link to="/Contact" className={"appRouter navRight"}>Contact</Link>
           </div>
         </div>
         <Routes>
