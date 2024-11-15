@@ -109,7 +109,10 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='right-container'>
-                    <Focus selectedSong={selectedSong} />
+                    {
+                        selectedSong ? <Focus selectedSong={selectedSong} /> : null
+                    }
+                    
                 </div>
             </div>
         </div>
