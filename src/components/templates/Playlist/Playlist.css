@@ -31,15 +31,3 @@
     text-overflow: ellipsis;
 }
 
-/*mobile*/
-
-@media screen and (max-width: 600px) {
-    .playlist-container {
-      width: 100vw;
-      height: auto;
-    }
-  
-    .playlist-song-container {
-      width: 80vw;
-    }
-  }
