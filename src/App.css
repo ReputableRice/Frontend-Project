@@ -52,14 +52,43 @@
     z-index: 5;
 }
 
-@media only screen and (max-width:820px) {
+@media only screen and (max-width:600px) {
     .navBar {
         width: 100vw;
+        margin: 0;
     }
 
     .navBarCategories {
         margin-left: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
+
+    .appRouter {
+        display: flex;
+        align-items: center;
+        background-color: var(--black);
+        padding: 0.5rem 2rem;
+        overflow: hidden;
+    
+        transition: cubic-bezier(.18,.69,.23,.99) 0.5s;
+        transform: skew(0);
+    
+        font-size: 24px;
+    }
+
+    .appRouter:hover {
+        transform: scale(0) translateX(0);
+        transform: skew(0) scale(1);
+    }
+
+    .navLeft {
+        border-radius: 0;
+    }
+    
+    .navRight {
+        border-radius: 0;
+    }
 }
+

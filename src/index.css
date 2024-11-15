@@ -51,6 +51,6 @@ body .content {
 
 @media only screen and (max-width:600px) {
   body .content {
-    margin: 0 2vw;
+    margin: 0 1rem;
   }
 }

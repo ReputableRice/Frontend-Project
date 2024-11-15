@@ -14,13 +14,11 @@ export default function Focus({ selectedSong }) {
         <div className='focus-container flex'>
             {/* <h2>Highlighted Song</h2> */}
             <div className='focus-song flex'>
-                <div className='focus-image flex'>
                     <img 
                         src={selectedSong.image_link} 
                         alt={selectedSong.title} 
                         className='focus-image-link'
                     />
-                </div>
                 <div className='focus-info flex'>
                     <p className='focus-item focus-title'>{selectedSong.title}</p>
                     <div className='focus-item focus-wide flex'>

@@ -38,6 +38,6 @@ h1 {
 
 @media screen and (max-width: 600px) {
     .my-masonry-grid {
-        margin: auto
+        margin: 0
     }
 }

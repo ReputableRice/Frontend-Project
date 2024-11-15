@@ -1,142 +1,155 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .focus-container {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .focus-song {
-    flex-direction: column;
-}
-
-.focus-image {
-    justify-content: center;
-    background-color: #555;
-
-    width: 696px;
-
-    height: 510px;
-    border-radius: 32px 32px 0px 32px;
-
-    overflow: hidden;
+  flex-direction: column;
 }
 
 .focus-image-link {
-    object-fit: cover;
+  justify-content: center;
+  background-color: #555;
+
+  width: 696px;
+
+  height: 510px;
+  border-radius: 32px 32px 0px 32px;
+
+  overflow: hidden;
+
+  object-fit: cover;
 }
 
 .focus-info {
-    margin-top: 37px;
+  margin-top: 37px;
 
-    display: flex;
-    width: 696px;
-    min-height: 233px;
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    flex-shrink: 0;
+  display: flex;
+  width: 696px;
+  min-height: 233px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
 
-    border-radius: 16px 16px 0px 16px;
-    border: 4px solid var(--000000, #000);
-    background: var(--353837, #353837);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.23);
+  border-radius: 16px 16px 0px 16px;
+  border: 4px solid var(--000000, #000);
+  background: var(--353837, #353837);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.23);
 }
 
 .focus-item {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 .focus-title {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .focus-wide {
-    justify-content: space-between;
-    padding-right: 2rem;
-    align-items: center;
-    padding-top: 0.2rem;
+  justify-content: space-between;
+  padding-right: 2rem;
+  align-items: center;
+  padding-top: 0.2rem;
 }
 
 .focus-author {
-    font-size: 1.3rem;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
 
-    color: var(--grey);
+  color: var(--grey);
 }
 
 .focus-link {
-    font-size: 1rem;
-    margin: 0;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .focus-desc {
-    margin-top: 0.6rem;
-    font-size: 0.9rem;
-    max-width: 100%;
-    height: 70px;
-    overflow-y: scroll;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  max-width: 100%;
+  height: 70px;
+  overflow-y: scroll;
 }
 
 .focus-desc > * {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .focus-desc::-webkit-scrollbar {
-    width: 0.5rem; 
-    position: absolute;
-    left: 0; 
+  width: 0.5rem;
+  position: absolute;
+  left: 0;
 }
 
 .focus-desc::-webkit-scrollbar-thumb {
-    background-color: darkgray; 
-    border-radius: 10px; 
+  background-color: darkgray;
+  border-radius: 10px;
 }
 
 .focus-desc::-webkit-scrollbar-track {
-    background: transparent; 
+  background: transparent;
 }
 
-@media only screen and (max-width:820px) {
-    .focus-song {
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-    }
+@media only screen and (max-width: 820px) {
+  .focus-song {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .focus-info {    
-        display: flex;
-        padding: 16px;
-        flex-direction: column;
-        height: 300px;
-    }
+  .focus-info {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: 300px;
+  }
 
-    .focus-desc {
-        margin-top: 0.6rem;
-        font-size: 0.9rem;
-        width: 100%;
-        word-wrap: break-word;
-    }
+  .focus-desc {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    width: 100%;
+    word-wrap: break-word;
+  }
 
-    .focus-image {
-        height: 200px;
-    }
+  .focus-image-link {
+    height: 200px;
+  }
 }
 
-@media screen and (max-width:600px) {
-    .focus-image {
-        width: 90%;
-    }
-    .focus-info {    
-        max-width: 90%;
-    }
+@media screen and (max-width: 600px) {
+  .focus-song {
+    justify-content: center;
+    flex-direction: row;
+  }
 
-    .focus-song {
-        justify-content: center;
-        align-items: center;
-    }
+  .focus-image-link {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .focus-info {
+    margin-top: 0;
+    max-width: 70%;
+    min-width: 70%;
+    max-height: 227px;
+    gap: 0;
+    height: auto;
+    min-height: auto;
+    padding: 1rem;
+    margin: 0;
+    flex-shrink: unset;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .focus-desc {
+    display: none;
+  }
 }

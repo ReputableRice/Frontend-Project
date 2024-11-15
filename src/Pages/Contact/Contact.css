@@ -1,14 +1,21 @@
 .contactPage {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-@media only screen and (max-width:820px) {
-    .contactPage {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
+@media only screen and (max-width: 820px) {
+  .contactPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contactSocials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

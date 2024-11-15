@@ -5,8 +5,28 @@ import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import { useEffect, useState } from 'react';
+
+/*
+TO DO:
+- Adjust Breakpoints on card components
+- Submission overlay breakpoints
+- Navbar for mobile
+- Basically all the component overlay's breakpoints
+*/
+
 
 function App() {
+  const viewport = window.innerWidth
+  const [mobile, setMobile] = useState(false)
+  
+  useEffect(() => {
+    if (viewport <= 600) {
+      console.log(viewport)
+      setMobile(true)
+    }
+  }, [viewport])
+
 
   return (
     <>
