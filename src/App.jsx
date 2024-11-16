@@ -30,8 +30,8 @@ function App() {
 
   return (
     <>
-      <Router>
-        <div className='navBar'>
+      <Router className="">
+        <div className='navBar desktopNav'>
           <div className='navBarCategories'>
             <Link to="/" className={"appRouter navLeft"}>Home</Link>
             <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
@@ -46,6 +46,11 @@ function App() {
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
       </Router>
+      <footer className='w-full flex items-center mt-6'>
+        <p className='m-auto'>
+        © Turntable
+        </p>
+      </footer>
     </>
   )
 }

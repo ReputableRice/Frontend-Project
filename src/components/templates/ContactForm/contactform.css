@@ -10,7 +10,7 @@
 
     border-radius: 16px 16px 0px 16px;
     border: 4px solid var(--000000, #000);
-    background: (var(--grey), #353837);
+    background-color: var(--d-grey);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.23);
 }
 

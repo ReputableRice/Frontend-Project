@@ -12,7 +12,7 @@
     /* Enables vertical scrolling */
     direction: rtl;
     /* Switches content flow direction */
-    background: linear-gradient(to bottom, transparent, #242424);
+    /* background: linear-gradient(to bottom, transparent, #242424); */
 
     margin: 0 0 0 1rem;
 }
