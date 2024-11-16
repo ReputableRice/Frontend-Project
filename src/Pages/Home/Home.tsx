@@ -7,6 +7,7 @@ import { CgPlayListAdd } from 'react-icons/cg';
 import { nanoid } from 'nanoid';
 import AddSong from '../../components/templates/AddSong/AddSong';
 import { json } from 'react-router-dom';
+import EditSong from '../../components/templates/EditSong/EditSong';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -39,12 +40,11 @@ export default function Home() {
         ];
     });
 
-    const [localSongs, setLocalSongs] = useState(() => {
-        const savedSongs = localStorage.getItem("song");
-        const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
-        return initialValue;
-    });
-
+    // const [localSongs, setLocalSongs] = useState(() => {
+    //     const savedSongs = localStorage.getItem("song");
+    //     const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
+    //     return initialValue;
+    // });
     const [selectedSong, setSelectedSong] = useState(songs[0]);
     const [newSong, setNewSong] = useState({
         title: '',
@@ -53,7 +53,8 @@ export default function Home() {
         image_link: '',
         song_link: ''
     });
-    const [addSongOverlay, setAddSongOverlay] = useState(false)
+    const [editingSong, setEditingSong] = useState(null);
+    const [addSongOverlay, setAddSongOverlay] = useState(false);
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -62,6 +63,21 @@ export default function Home() {
     const deleteSong = (id) => {
         setSongs(songs.filter((song) => song.id !== id));
     };
+
+    const handleEdit = (song) => {
+        setEditingSong(song)
+    }
+
+    const handleEditInput = (e) => {
+        const { name, value } = e.target;
+        setEditingSong({ ...editingSong, [name]: value });
+    }
+
+    const handleSongUpdate = (e) => {
+        e.preventDefault();
+        setSongs(songs.map((song) => (song.id === editingSong.id ? editingSong : song)));
+        setEditingSong(null);
+    }
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -90,11 +106,11 @@ export default function Home() {
 
     useEffect(() => {
         return () => localStorage.setItem("song", JSON.stringify(songs))
-    }, [songs])
-
+    }, [songs]);
 
     return (
         <div className='content'>
+            <EditSong handleSongUpdate={handleSongUpdate} editingSong={editingSong} handleEditInput={handleEditInput} />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
@@ -105,14 +121,14 @@ export default function Home() {
                         <CgPlayListAdd size={"4em"} className='icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} />
+                        <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>
                     {
                         selectedSong ? <Focus selectedSong={selectedSong} /> : null
                     }
-                    
+
                 </div>
             </div>
         </div>
