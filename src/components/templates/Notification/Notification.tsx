@@ -4,7 +4,7 @@ import styles from "./Notification.module.css"
 export default function Notification({ message }) {
     const [notiStyle, setNotiStyle] = useState("")
 
-    //doesnt work
+    //animation doesnt work
     useEffect(() => {
         if (message) {
             setNotiStyle("visible")

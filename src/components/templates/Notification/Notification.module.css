@@ -17,15 +17,15 @@
   bottom: 3rem;
   right: 72px;
 
-  transition: all 1s cubic-bezier(0,.98,.92,.06);
+  transition: all 1s cubic-bezier(0, 0.98, 0.92, 0.06);
 }
 
 .visible {
-    transform: translateY(0);
-    opacity: 100%;
+  transform: translateY(0);
+  opacity: 100%;
 }
 
 .invisible {
-    transform: translateY(100px);
-    opacity: 0%;
+  transform: translateY(100px);
+  opacity: 0%;
 }

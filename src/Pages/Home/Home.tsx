@@ -120,8 +120,6 @@ export default function Home() {
         return () => localStorage.setItem("song", JSON.stringify(songs));
     }, [songs]);
 
-
-
     return (
         <div className='content'>
             {
