@@ -1,0 +1,257 @@
+[33mcommit 1face80a918dae4b6f80ff91437964a02c425cb9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mJackie/Solo-Work[m[33m, [m[1;31morigin/Jackie/Solo-Work[m[33m)[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Wed Nov 13 23:55:31 2024 -0800
+
+    Ipad Styling
+
+[33mcommit b591df06ba7cafa7a5925fdbc801dad42ab79d1b[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Wed Nov 13 23:18:58 2024 -0800
+
+    inserted local storage control within home.tsx for songs
+
+[33mcommit b62169ecf8456bb066be365975103438782b1c5b[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sun Nov 10 20:20:59 2024 -0800
+
+    Adding songs
+
+[33mcommit c3807e68477b5a58f62c60b2419556b346f3d148[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sun Nov 10 18:55:59 2024 -0800
+
+    Deletion feature + Stylizations
+
+[33mcommit 09516e5b9f78e2adf2a1f11febff85e4e003e01f[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 19:54:39 2024 -0700
+
+    clean up home.css
+
+[33mcommit 7308f53c2df1b586806fe752f85dd7674fc59eea[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 19:51:52 2024 -0700
+
+    removed postcss.confit.js
+
+[33mcommit 0e4e0a1b73e8bc8d25e5d83633d148e8900b80b2[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 19:46:10 2024 -0700
+
+    general changes
+
+[33mcommit 0831e81cff4175ee739c495763d797014edbe1ad[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 19:29:41 2024 -0700
+
+    songs component css
+
+[33mcommit 11df28a0030f9019ee5e3bbc49590c5d5aef1728[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 18:47:13 2024 -0700
+
+    icons
+
+[33mcommit fed99e67e0cd773b3c8679ca5ea51a5b5b24959a[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 17:00:28 2024 -0700
+
+    Remade navbar
+
+[33mcommit eebefdf2d45f394e3bc2e86028822748b9d7a0ba[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: b1091ac 582c9b2
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Sat Nov 2 19:26:26 2024 -0400
+
+    Merge pull request #7 from ReputableRice/fix/package
+    
+    Icons Error Package.json Fix
+
+[33mcommit 582c9b239c72df369f7273e65137b16159917306[m[33m ([m[1;31morigin/fix/package[m[33m, [m[1;32mfix/package[m[33m)[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 16:25:31 2024 -0700
+
+    Icons Fixed
+
+[33mcommit b1091aca813491a1170c8f532f4e984a67632e0b[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 16:15:07 2024 -0700
+
+    temporarily disabled react-social-icons (debugging)
+
+[33mcommit 727035bc92af2c6623e0c33446f703c108dad6fe[m
+Merge: fefebaf ed17f70
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Sat Nov 2 19:11:04 2024 -0400
+
+    Merge pull request #6 from ReputableRice/playlistcssfix
+    
+    Playlistcssfix
+
+[33mcommit ed17f7067cbd50d014a8f8eb69c03abd67487ac2[m[33m ([m[1;31morigin/playlistcssfix[m[33m)[m
+Merge: 82fc06b fefebaf
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Sat Nov 2 19:08:50 2024 -0400
+
+    Merge branch 'main' into playlistcssfix
+
+[33mcommit 82fc06bf7075a8c8452138f83ed049685c24d12c[m[33m ([m[1;32mplaylistcssfix[m[33m)[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sat Nov 2 16:07:36 2024 -0700
+
+    Tuned Masonry Breakpoints
+
+[33mcommit b7cc1e4400710d7b37933c4e77b38e96d288af68[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Mon Oct 28 21:57:42 2024 -0700
+
+    applied masonry to playlists.tsx
+
+[33mcommit fefebafc42a5151c64b02af3007b269849d448a1[m
+Merge: 5807a9c e376825
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 15 10:41:31 2024 -0700
+
+    Merge pull request #4 from ReputableRice/contact
+    
+    Contact
+
+[33mcommit e376825ca53850448a24e5719c89c493d548297b[m[33m ([m[1;31morigin/contact[m[33m)[m
+Merge: 972be98 5807a9c
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 15 10:41:12 2024 -0700
+
+    Merge branch 'main' into contact
+
+[33mcommit 5807a9c19f9d8bfe800ee7a3c82c8f08e16accb9[m
+Merge: 0a72ceb f5ffde2
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 15 10:38:44 2024 -0700
+
+    Merge pull request #5 from ReputableRice/about
+    
+    About
+
+[33mcommit f5ffde27ad738af12e6098b5269243186aeeef0d[m[33m ([m[1;31morigin/about[m[33m, [m[1;32mabout[m[33m)[m
+Merge: 9b96f4c 0a72ceb
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 15 10:37:42 2024 -0700
+
+    Merge branch 'main' into about
+
+[33mcommit 0a72cebfcaa96cc82a4908fef3e0fdf85c6a183f[m
+Merge: 7629226 e1750e2
+Author: Ben Louis <142682578+Sucralosee@users.noreply.github.com>
+Date:   Tue Oct 15 10:35:06 2024 -0700
+
+    Merge pull request #3 from ReputableRice/playlist
+    
+    Playlist
+
+[33mcommit 76292269eb6eafc49c35362a245ad3270897cf82[m
+Merge: 686bead 72c6722
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 15 10:33:31 2024 -0700
+
+    Merge pull request #2 from ReputableRice/css-home
+    
+    added css to make home not scrollable
+
+[33mcommit e1750e26e1b5f3ed3621e233a25d5fb5b68f8a2a[m[33m ([m[1;31morigin/playlist[m[33m)[m
+Author: Henver <biohenver@gmail.com>
+Date:   Sat Oct 12 03:28:50 2024 -0700
+
+    resizing and hover fix
+
+[33mcommit be6fe7130564035ae8a8bc85692ac2fadbd61b33[m
+Author: Henver <biohenver@gmail.com>
+Date:   Sat Oct 12 02:57:52 2024 -0700
+
+    hover effect
+
+[33mcommit 2440ed3e7f37174aee5d84400059eaf795aff61a[m
+Author: Henver <biohenver@gmail.com>
+Date:   Sat Oct 12 02:38:15 2024 -0700
+
+    playlist v1
+
+[33mcommit 72c6722e0db9d729e9b9a0a68d1e5f384ee49257[m[33m ([m[1;31morigin/css-home[m[33m)[m
+Author: Ben Louis <142682578+Sucralosee@users.noreply.github.com>
+Date:   Fri Oct 11 17:40:56 2024 -0700
+
+    added css to make home not scrollable
+
+[33mcommit 686bead69a949b4dc0741c863c8a53751bd66a4e[m
+Merge: cb6a845 882c2ce
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Wed Oct 9 11:43:07 2024 -0700
+
+    Merge pull request #1 from ReputableRice/song_list
+    
+    Song list
+
+[33mcommit 9b96f4c1c25a0f13e5fb0170786bb981114d204c[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 22:06:52 2024 -0700
+
+    moved card to properly margin from navbar
+
+[33mcommit 972be98f404110894964449db4175f6060c4638b[m[33m ([m[1;32mcontact[m[33m)[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 22:03:53 2024 -0700
+
+    Added card to contact page
+
+[33mcommit 7f96488f4c1397630c8fffa6213e59c965d231d2[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 21:57:38 2024 -0700
+
+    templated contact form in contact.tsx
+
+[33mcommit 8675134f06a3a13a51fa1ff36abc4b300553db87[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 21:35:27 2024 -0700
+
+    form styling in contact.tsx
+
+[33mcommit cb6a845e27eb78bcbbecd5b3b6ad43ff328c5f74[m
+Author: Jackie <144720240+ReputableRice@users.noreply.github.com>
+Date:   Tue Oct 8 13:32:15 2024 -0700
+
+    Added tailwind script to top most index.html
+
+[33mcommit 7452d51ac0826b4dcb718f383d0c5cf8baa427d2[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 13:30:58 2024 -0700
+
+    tailwind install fix
+
+[33mcommit 1860429c9f191356bfe99b8122867acb90bce701[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 13:00:50 2024 -0700
+
+    Figma Styles in Contact.tsx
+
+[33mcommit 6c0c894c25e9d2a3b33e578be225a850761aae16[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 12:19:04 2024 -0700
+
+    html for contact form in Contact.css
+
+[33mcommit 7038fe70f1f6a50b9ab46bea39648ebbcb23c46d[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Tue Oct 8 10:58:10 2024 -0700
+
+    completed card
+
+[33mcommit ed54093a939c633f90e57102975c9f4195893137[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sun Oct 6 23:29:45 2024 -0700
+
+    Changed placeholder text in Card.tsx
+
+[33mcommit 1127b8520612ce00b19e644b8131a049e2a7bef0[m[33m ([m[1;31morigin/About[m[33m)[m
+Author: Skailodon <jackiehtruong@outlook.com>
+Date:   Sun Oct 6 23:27:49 2024 -0700
+
+    Card ab

@@ -34,6 +34,13 @@
 
   --h1: 1.5rem
 
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/App bg.png");
+}
+
+html {
+  height: 100vh;
   width: 100vw;
 }
 
@@ -47,4 +54,18 @@ body {
 
 body .content {
   margin: 0 8.438vw;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width:600px) {
+  body .content {
+    margin: 0 1rem;
+  }
+
+  .desktopNav {
+    display: none;
+  }
 }

@@ -7,7 +7,7 @@ export default function AddSong({ handleAddSong, handleInputChange, newSong, clo
 
     return (
         <>
-            <form onSubmit={handleAddSong} className={`song-form flex flex-col max-w-96 ${styles.addForm}`}>
+            <form onSubmit={handleAddSong} className={`flex flex-col max-w-96 ${styles.addForm}`}>
                 <div className={`${styles.addHeader}`}>
                     <h1>Add A Song</h1>
                     <BiX size={"3rem"} className={styles.close} onClick={closeAddSong} />

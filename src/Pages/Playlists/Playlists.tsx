@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './playlists.css'
-import { songs } from '../../data/dummy';
 import Playlist from '../../components/templates/Playlist/Playlist';
-import Masonry from 'react-masonry-css'
+import Masonry from 'react-masonry-css';
+import { useState } from 'react';
 
-
-export default function Playlists() {
+export default function Playlists({ }) {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
     const breakpoints = {
         default: 4,
@@ -14,18 +13,27 @@ export default function Playlists() {
         700: 1,
     }
 
+    const [songs, setSongs] = useState(() => {
+        const savedSongs = localStorage.getItem("song");
+        const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
+        return initialValue;
+    });
+
+    const error = songs.length > 0;
+    
+
     return (
         <>
-                <div className='content'>
-                    <Masonry
-                        breakpointCols={breakpoints}
-                        className="my-masonry-grid"
-                        columnClassName="my-masonry-grid_column">
-                        {songs.map((song, index) => (
-                            <Playlist key={index} artist={song} />
-                        ))}
-                    </Masonry>
-                </div>
+            <div className='content'>
+                <Masonry
+                    breakpointCols={breakpoints}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column">
+                    {error ? songs.map((song, index) => (
+                        <Playlist key={index} artist={song} />
+                    )) : "error"}
+                </Masonry>
+            </div>
         </>
     )
 }

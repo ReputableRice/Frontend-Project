@@ -13,7 +13,7 @@
     color: var(--n-green);
 }
 
-img {
+.playlist-image {
     width: 100%;
     object-fit: cover;
 }
@@ -30,3 +30,4 @@ img {
     color: #b3b3b3;
     text-overflow: ellipsis;
 }
+

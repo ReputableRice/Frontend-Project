@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./home.css"
 import Song from '../../components/molecules/song';
 import Focus from '../../components/molecules/Focus';
@@ -6,51 +6,45 @@ import { FaPlus, FaBars } from "react-icons/fa";
 import { CgPlayListAdd } from 'react-icons/cg';
 import { nanoid } from 'nanoid';
 import AddSong from '../../components/templates/AddSong/AddSong';
+import { json } from 'react-router-dom';
+import EditSong from '../../components/templates/EditSong/EditSong';
 
 export default function Home() {
-    const [songs, setSongs] = useState([
-        {
-            id: nanoid(),
-            title: 'Pure Blood',
-            image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4CIO3epP3But06P9xsDPvknJy59JGCQ9OKQ&s",
-            author: "Dareharu",
-            song_link: "https://www.youtube.com/watch?v=en78bBw-Ekw",
-            song_desc: "달의하루(Dareharu) 『순혈주의자(Pure Blood)"
-        },
-        {
-            id: nanoid(),
-            title: 'jschlatt — Santa Claus Is Coming To Town (Official)',
-            image_link: "https://i.ytimg.com/vi/hayoY2Ov8PM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCccpnkxaz6_w9igkfcX01UFCAlSQ",
-            author: "JSchlatt",
-            song_link: "https://www.youtube.com/watch?v=hayoY2Ov8PM",
-            song_desc: "MERRY CHRISTMAS BABY!!!!!!"
-        },
-        {
-            id: nanoid(),
-            title: 'みゆな - ガムシャラ【Official Music Video】',
-            image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
-            author: "Miyuna",
-            song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
-            song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
-        },
-        {
-            id: nanoid(),
-            title: 'みゆな - ガムシャラ【Official Music Video】',
-            image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
-            author: "Miyuna",
-            song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
-            song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
-        },
-        {
-            id: nanoid(),
-            title: 'みゆな - ガムシャラ【Official Music Video】',
-            image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
-            author: "Miyuna",
-            song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
-            song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
-        },
-    ]);
+    const [songs, setSongs] = useState(() => {
+        const savedSongs = localStorage.getItem("song");
+        return savedSongs ? JSON.parse(savedSongs) : [
+            {
+                id: nanoid(),
+                title: 'Pure Blood',
+                image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4CIO3epP3But06P9xsDPvknJy59JGCQ9OKQ&s",
+                author: "Dareharu",
+                song_link: "https://www.youtube.com/watch?v=en78bBw-Ekw",
+                song_desc: "달의하루(Dareharu) 『순혈주의자(Pure Blood)"
+            },
+            {
+                id: nanoid(),
+                title: 'jschlatt — Santa Claus Is Coming To Town (Official)',
+                image_link: "https://i.ytimg.com/vi/hayoY2Ov8PM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCccpnkxaz6_w9igkfcX01UFCAlSQ",
+                author: "JSchlatt",
+                song_link: "https://www.youtube.com/watch?v=hayoY2Ov8PM",
+                song_desc: "MERRY CHRISTMAS BABY!!!!!!"
+            },
+            {
+                id: nanoid(),
+                title: 'みゆな - ガムシャラ【Official Music Video】',
+                image_link: "https://i.ytimg.com/vi/TciQvQFTzHo/maxresdefault.jpg",
+                author: "Miyuna",
+                song_link: "https://www.youtube.com/watch?v=TciQvQFTzHo",
+                song_desc: "TVアニメ「ブラッククローバー」第５クールオープニングテーマガムシャラ 楽曲配信はこちら ⇒ https://MIYUNA.lnk.to/MIYUNA_GAMUSYARA"
+            },
+        ];
+    });
 
+    // const [localSongs, setLocalSongs] = useState(() => {
+    //     const savedSongs = localStorage.getItem("song");
+    //     const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
+    //     return initialValue;
+    // });
     const [selectedSong, setSelectedSong] = useState(songs[0]);
     const [newSong, setNewSong] = useState({
         title: '',
@@ -59,7 +53,8 @@ export default function Home() {
         image_link: '',
         song_link: ''
     });
-    const [addSongOverlay, setAddSongOverlay] = useState(false)
+    const [editingSong, setEditingSong] = useState(null);
+    const [addSongOverlay, setAddSongOverlay] = useState(false);
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -68,6 +63,21 @@ export default function Home() {
     const deleteSong = (id) => {
         setSongs(songs.filter((song) => song.id !== id));
     };
+
+    const handleEdit = (song) => {
+        setEditingSong(song)
+    }
+
+    const handleEditInput = (e) => {
+        const { name, value } = e.target;
+        setEditingSong({ ...editingSong, [name]: value });
+    }
+
+    const handleSongUpdate = (e) => {
+        e.preventDefault();
+        setSongs(songs.map((song) => (song.id === editingSong.id ? editingSong : song)));
+        setEditingSong(null);
+    }
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -94,8 +104,17 @@ export default function Home() {
         setAddSongOverlay(!addSongOverlay)
     }
 
+    function closeEditSong() {
+        setEditingSong(null)
+    }
+
+    useEffect(() => {
+        return () => localStorage.setItem("song", JSON.stringify(songs))
+    }, [songs]);
+
     return (
         <div className='content'>
+            <EditSong handleSongUpdate={handleSongUpdate} editingSong={editingSong} handleEditInput={handleEditInput} closeEditSong={closeEditSong} />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
@@ -106,11 +125,14 @@ export default function Home() {
                         <CgPlayListAdd size={"4em"} className='icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} />
+                        <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>
-                    <Focus selectedSong={selectedSong} />
+                    {
+                        selectedSong ? <Focus selectedSong={selectedSong} /> : null
+                    }
+
                 </div>
             </div>
         </div>

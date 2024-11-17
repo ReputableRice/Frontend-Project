@@ -5,18 +5,38 @@ import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import { useEffect, useState } from 'react';
+
+/*
+TO DO:
+- Adjust Breakpoints on card components
+- Submission overlay breakpoints
+- Navbar for mobile
+- Basically all the component overlay's breakpoints
+*/
+
 
 function App() {
+  const viewport = window.innerWidth
+  const [mobile, setMobile] = useState(false)
+  
+  useEffect(() => {
+    if (viewport <= 600) {
+      console.log(viewport)
+      setMobile(true)
+    }
+  }, [viewport])
+
 
   return (
     <>
-      <Router>
-        <div className='navBar'>
+      <Router className="">
+        <div className='navBar desktopNav'>
           <div className='navBarCategories'>
             <Link to="/" className={"appRouter navLeft"}>Home</Link>
+            <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
             <Link to="/About" className={"appRouter nav"}>About</Link>
-            <Link to="/Contact" className={"appRouter nav"}>Contact</Link>
-            <Link to="/Playlists" className={"appRouter navRight"}>Playlists</Link>
+            <Link to="/Contact" className={"appRouter navRight"}>Contact</Link>
           </div>
         </div>
         <Routes>
@@ -26,6 +46,11 @@ function App() {
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
       </Router>
+      <footer className='w-full flex items-center mt-6'>
+        <p className='m-auto'>
+        © Turntable
+        </p>
+      </footer>
     </>
   )
 }

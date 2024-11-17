@@ -1,7 +1,8 @@
+import { FaPencil } from 'react-icons/fa6';
 import './song.css';
 import { FaTrash } from 'react-icons/fa';
 
-export default function Song({ handleSongClick, songs, deleteSong }) {
+export default function Song({ handleSongClick, songs, deleteSong, handleEdit }) {
 
     return (
         <div className='playlist-container'>
@@ -23,6 +24,7 @@ export default function Song({ handleSongClick, songs, deleteSong }) {
                                         deleteSong(song.id);
                                     }} 
                                 />
+                                <FaPencil onClick={() => handleEdit(song)}/>
                             </div>
                         </div>
                     </div>
