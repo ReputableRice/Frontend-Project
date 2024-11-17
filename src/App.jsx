@@ -6,6 +6,7 @@ import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import { useEffect, useState } from 'react';
+import { FaBars, FaX } from 'react-icons/fa6';
 
 /*
 TO DO:
@@ -18,19 +19,31 @@ TO DO:
 
 function App() {
   const viewport = window.innerWidth
-  const [mobile, setMobile] = useState(false)
-  
-  useEffect(() => {
-    if (viewport <= 600) {
-      console.log(viewport)
-      setMobile(true)
-    }
-  }, [viewport])
-
+  const [mobileNav, setMobileNav] = useState(false)
 
   return (
     <>
       <Router className="">
+        <div className='mobileNavTab'>
+          <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />
+        </div>
+        <div className='mobileNav'>
+          {mobileNav ?
+            <div className='navBar'>
+              <div className='navBarCategories'>
+                <div className='mobileNavTab'>
+                  <FaX size={"2rem"} onClick={() => setMobileNav(false)} />
+                </div>
+                <Link to="/" className={"appRouter navLeft"}>Home</Link>
+                <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
+                <Link to="/About" className={"appRouter nav"}>About</Link>
+                <Link to="/Contact" className={"appRouter navRight"}>Contact</Link>
+              </div>
+            </div>
+            : ""
+          }
+        </div>
+
         <div className='navBar desktopNav'>
           <div className='navBarCategories'>
             <Link to="/" className={"appRouter navLeft"}>Home</Link>
@@ -46,11 +59,6 @@ function App() {
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
       </Router>
-      <footer className='w-full flex items-center mt-6'>
-        <p className='m-auto'>
-        © Turntable
-        </p>
-      </footer>
     </>
   )
 }

@@ -132,7 +132,6 @@ export default function Home() {
                     {
                         selectedSong ? <Focus selectedSong={selectedSong} /> : null
                     }
-
                 </div>
             </div>
         </div>

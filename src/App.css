@@ -1,5 +1,5 @@
 .navBar {
-    margin: 3.125rem 0 3.125rem 0;  
+    padding: 3.125rem 0 3.125rem 0;  
 }
 
 .navBarCategories {
@@ -52,10 +52,20 @@
     z-index: 5;
 }
 
+.mobileNav {
+    display: none;
+}
+
+
+.mobileNavTab {
+    display: none;
+} 
+
 @media only screen and (max-width:600px) {
     .navBar {
         width: 100vw;
         margin: 0;
+        padding: 0;
     }
 
     .navBarCategories {
@@ -90,5 +100,21 @@
     .navRight {
         border-radius: 0;
     }
+
+    .mobileNav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 5;
+        top: 0;
+    }
+
+    .mobileNavTab {
+        display: flex;
+        justify-content: end;
+        margin: 1rem;
+        background-color: var(--black)
+    }
+
 }
 
