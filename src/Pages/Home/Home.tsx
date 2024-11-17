@@ -59,6 +59,9 @@ export default function Home() {
     const [editingSong, setEditingSong] = useState(null);
     const [addSongOverlay, setAddSongOverlay] = useState(false);
     const [message, setMessage] = useState(null);
+    const [toolTip, setTooltip] = useState(false)
+
+    const toolTipMessage = `Try adding a song!`
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -120,17 +123,30 @@ export default function Home() {
         return () => localStorage.setItem("song", JSON.stringify(songs));
     }, [songs]);
 
+
+    useEffect(() => {
+        if (!window.localStorage) {
+            setTooltip(true)
+            setTimeout(() => { setMessage(null) }, 5000);
+        }
+        else {
+            if (!window.localStorage.isReturningVisitor) {
+                setTooltip(false)
+                window.localStorage.isReturningVisitor = true;
+            }
+        }
+    })
+
     return (
         <div className='content'>
-            {
-                message ? <Notification message={message} /> : null
-            }
+            {toolTip && <Notification message={toolTipMessage} />}
+            {message && <Notification message={message} />}
             <EditSong
                 handleSongUpdate={handleSongUpdate}
                 editingSong={editingSong}
                 handleEditInput={handleEditInput}
-                closeEditSong={closeEditSong} 
-                />
+                closeEditSong={closeEditSong}
+            />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
