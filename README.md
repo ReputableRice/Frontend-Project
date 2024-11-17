@@ -14,9 +14,9 @@ An app for storing and managing your favourite songs!
 
 ## Breakpoints / Responsiveness
 - This app is responsive to the following points: 
-**Desktop**: 1920 x 1080
-**Tablet**: 820 x 1180 (iPad Air)
-**Mobile**: 414 x 896 (iPhone XR)
+- **Desktop**: 1920 x 1080
+- **Tablet**: 820 x 1180 (iPad Air)
+- **Mobile**: 414 x 896 (iPhone XR)
 
 ## CRUD Features
 - **Create:** Adding songs to the playlist
