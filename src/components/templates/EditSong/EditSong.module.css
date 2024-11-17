@@ -39,3 +39,7 @@
     background-color: var(--n-green);
     color: var(--black);
 }
+
+.close:hover {
+    color: var(--n-green);
+}
