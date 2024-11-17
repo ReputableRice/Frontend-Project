@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import { useEffect, useState } from 'react';
 import { FaBars, FaX } from 'react-icons/fa6';
+import Preloader from './components/templates/Preloader/Preloader';
 
 /*
 TO DO:
@@ -59,6 +60,7 @@ function App() {
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
       </Router>
+      <Preloader />
     </>
   )
 }

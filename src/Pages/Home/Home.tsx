@@ -8,7 +8,6 @@ import { nanoid } from 'nanoid';
 import AddSong from '../../components/templates/AddSong/AddSong';
 import { json } from 'react-router-dom';
 import EditSong from '../../components/templates/EditSong/EditSong';
-import Preloader from '../../components/templates/Preloader/Preloader';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -135,7 +134,6 @@ export default function Home() {
                     }
                 </div>
             </div>
-            <Preloader />
         </div>
     );
 }
