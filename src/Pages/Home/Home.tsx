@@ -104,13 +104,17 @@ export default function Home() {
         setAddSongOverlay(!addSongOverlay)
     }
 
+    function closeEditSong() {
+        setEditingSong(null)
+    }
+
     useEffect(() => {
         return () => localStorage.setItem("song", JSON.stringify(songs))
     }, [songs]);
 
     return (
         <div className='content'>
-            <EditSong handleSongUpdate={handleSongUpdate} editingSong={editingSong} handleEditInput={handleEditInput} />
+            <EditSong handleSongUpdate={handleSongUpdate} editingSong={editingSong} handleEditInput={handleEditInput} closeEditSong={closeEditSong} />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
