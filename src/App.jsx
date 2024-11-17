@@ -53,7 +53,7 @@ function App() {
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
       </Router>
-      {/* <Preloader /> */}
+      <Preloader />
     </>
   )
 }

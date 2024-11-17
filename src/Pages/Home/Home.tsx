@@ -8,6 +8,8 @@ import { nanoid } from 'nanoid';
 import AddSong from '../../components/templates/AddSong/AddSong';
 import EditSong from '../../components/templates/EditSong/EditSong';
 import Notification from '../../components/templates/Notification/Notification';
+import { BiFilter } from 'react-icons/bi';
+import { FaFilter } from 'react-icons/fa6';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -48,7 +50,7 @@ export default function Home() {
         ];
     });
 
-    const [selectedSong, setSelectedSong] = useState();
+    const [selectedSong, setSelectedSong] = useState(songs[0]);
     const [newSong, setNewSong] = useState({
         title: '',
         author: '',
@@ -129,15 +131,15 @@ export default function Home() {
                 handleSongUpdate={handleSongUpdate}
                 editingSong={editingSong}
                 handleEditInput={handleEditInput}
-                closeEditSong={closeEditSong} 
-                />
+                closeEditSong={closeEditSong}
+            />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
             <div className='main-container'>
                 <div className='flex left-content'>
                     <div className='playlist-icons'>
-                        <FaBars size={"2.5rem"} className='playlist-icon' />
+                        <FaFilter size={"2.5rem"} className='playlist-icon' />
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
@@ -145,9 +147,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='right-container'>
-                    {
-                        selectedSong ? <Focus selectedSong={selectedSong} /> : null
-                    }
+                    <Focus selectedSong={selectedSong} /> 
                 </div>
             </div>
         </div>

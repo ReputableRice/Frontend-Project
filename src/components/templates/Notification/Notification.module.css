@@ -29,3 +29,11 @@
   transform: translateY(100px);
   opacity: 0%;
 }
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+    .notificationBorder {
+        bottom: 0;
+        right: 0;      
+      }
+  }

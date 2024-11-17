@@ -128,7 +128,7 @@ export default function Preloader(){
             <div className="loading-screen">
                 <div className="loader">
                     <div className="loader-black">
-                        <img src="./public/hehe.jpg" className="mane"/>
+                        {/* <img src="./public/TURNTABLE.svg" className="mane"/> */}
                     </div>
                     <div className="loader-1 bar"></div>
 

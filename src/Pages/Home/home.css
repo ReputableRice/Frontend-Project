@@ -61,7 +61,7 @@
     .left-container {
         max-height: 350px;
         direction: rtl;
-        margin: 0;
+        margin: 1rem 0;
     }
 
     .left-container>* {
