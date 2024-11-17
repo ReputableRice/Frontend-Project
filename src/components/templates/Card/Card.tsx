@@ -7,7 +7,7 @@ export default function Card() {
     return (
         <div className="cardRelative">
             <div className="cardContainer">
-                <img className="cardImage"src='https://placehold.co/600x400' />
+                <img className="cardImage"src='https://images.pexels.com/photos/1616470/pexels-photo-1616470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
                 <CardBottom />
             </div>
         </div>
