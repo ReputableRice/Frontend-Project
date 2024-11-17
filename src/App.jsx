@@ -36,7 +36,6 @@ function App() {
             : ""
           }
         </div>
-
         <div className='navBar desktopNav'>
           <div className='navBarCategories'>
             <Link to="/" className={"appRouter navLeft"}>Home</Link>

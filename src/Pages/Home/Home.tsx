@@ -5,6 +5,7 @@ import Focus from '../../components/molecules/Focus';
 import { FaPlus, FaBars } from "react-icons/fa";
 import { CgPlayListAdd } from 'react-icons/cg';
 import { nanoid } from 'nanoid';
+import Filter from '../../components/templates/Filter/Filter';
 import AddSong from '../../components/templates/AddSong/AddSong';
 import EditSong from '../../components/templates/EditSong/EditSong';
 import Notification from '../../components/templates/Notification/Notification';
@@ -61,6 +62,17 @@ export default function Home() {
     const [editingSong, setEditingSong] = useState(null);
     const [addSongOverlay, setAddSongOverlay] = useState(false);
     const [message, setMessage] = useState(null);
+    const [filter, setFilter] = useState(null)
+    const [filteredSongs, setFilteredSongs] = useState(songs)
+    const [filterOverlay, setFilterOverlay] = useState(false)
+
+    useEffect(() => {
+        localStorage.setItem("song", JSON.stringify(songs));
+    }, [songs]);
+
+    useEffect(() => {
+        ApplyFilters();
+    }, [filter, songs]);
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -71,7 +83,7 @@ export default function Home() {
     };
 
     const handleEdit = (song) => {
-        setEditingSong(song)
+        setEditingSong(song);
     };
 
     const handleEditInput = (e) => {
@@ -83,8 +95,8 @@ export default function Home() {
         e.preventDefault();
         setSongs(songs.map((song) => (song.id === editingSong.id ? editingSong : song)));
         setEditingSong(null);
-        setMessage("Song Edited!")
-        setTimeout(() => { setMessage(null) }, 2000);
+        setMessage("Song Edited!");
+        setTimeout(() => setMessage(null), 2000);
     };
 
     const handleInputChange = (e) => {
@@ -94,60 +106,64 @@ export default function Home() {
 
     const handleAddSong = (e) => {
         e.preventDefault();
-        const songToAdd = {
-            ...newSong,
-            id: nanoid()
-        };
+        const songToAdd = { ...newSong, id: nanoid() };
         setSongs([...songs, songToAdd]);
-        setNewSong({
-            title: '',
-            author: '',
-            song_desc: '',
-            image_link: '',
-            song_link: ''
-        });
-        setMessage("Song Added!")
-        setTimeout(() => { setMessage(null) }, 2000);
+        setNewSong({ title: '', author: '', song_desc: '', image_link: '', song_link: '' });
+        setMessage("Song Added!");
+        setTimeout(() => setMessage(null), 2000);
     };
 
-    function toggleAddSong() {
+    const toggleAddSong = () => {
         setAddSongOverlay(!addSongOverlay);
     };
 
-    function closeEditSong() {
+    const closeEditSong = () => {
         setEditingSong(null);
     };
 
-    useEffect(() => {
-        return () => localStorage.setItem("song", JSON.stringify(songs));
-    }, [songs]);
+    const ApplyFilters = () => {
+        let updatedSongs = [...songs];
+
+        if (filter === "reversealpha") {
+            updatedSongs.sort((a, b) => b.title.localeCompare(a.title));
+            setFilterOverlay(false); 
+        } else if (filter === "alpha") {
+            updatedSongs.sort((a, b) => a.title.localeCompare(b.title));
+            setFilterOverlay(false); 
+        }
+
+        setFilteredSongs(updatedSongs);
+    };
 
     return (
         <div className='content'>
-            {
-                message ? <Notification message={message} /> : null
-            }
+            {message && <Notification message={message} />}
             <EditSong
                 handleSongUpdate={handleSongUpdate}
                 editingSong={editingSong}
                 handleEditInput={handleEditInput}
                 closeEditSong={closeEditSong}
             />
-            {addSongOverlay ?
+            {filterOverlay && <Filter ReverseAlpha={() => setFilter("reversealpha")} Alphabetical={() => setFilter("alpha")} />}
+            {addSongOverlay && (
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
-                : null}
+            )}
             <div className='main-container'>
                 <div className='flex left-content'>
                     <div className='playlist-icons'>
-                        <FaFilter size={"2.5rem"} className='playlist-icon' />
+                        <FaFilter size={"2.5rem"} className='playlist-icon'
+                            onClick={() => { 
+                                setFilter("editing");
+                                setFilterOverlay(true); 
+                                }} />
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} handleEdit={handleEdit} />
+                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>
-                    <Focus selectedSong={selectedSong} /> 
+                    <Focus selectedSong={selectedSong} />
                 </div>
             </div>
         </div>
