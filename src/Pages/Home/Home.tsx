@@ -6,13 +6,21 @@ import { FaPlus, FaBars } from "react-icons/fa";
 import { CgPlayListAdd } from 'react-icons/cg';
 import { nanoid } from 'nanoid';
 import AddSong from '../../components/templates/AddSong/AddSong';
-import { json } from 'react-router-dom';
 import EditSong from '../../components/templates/EditSong/EditSong';
+import Notification from '../../components/templates/Notification/Notification';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
         const savedSongs = localStorage.getItem("song");
         return savedSongs ? JSON.parse(savedSongs) : [
+            {
+                id: nanoid(),
+                title: 'Just the Two of Us (feat. Bill Withers)',
+                image_link: "https://i.ytimg.com/vi/6POZlJAZsok/maxresdefault.jpg",
+                author: "Grover Washington, Jr. · Bill Withers (feat. Bill Withers)",
+                song_link: "https://www.youtube.com/watch?v=6POZlJAZsok",
+                song_desc: "Provided to YouTube by Rhino/ElektraJust the Two of Us (feat. Bill Withers) · Grover Washington, Jr. · Bill WithersAnthology"
+            },
             {
                 id: nanoid(),
                 title: 'Pure Blood',
@@ -40,12 +48,7 @@ export default function Home() {
         ];
     });
 
-    // const [localSongs, setLocalSongs] = useState(() => {
-    //     const savedSongs = localStorage.getItem("song");
-    //     const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
-    //     return initialValue;
-    // });
-    const [selectedSong, setSelectedSong] = useState(songs[0]);
+    const [selectedSong, setSelectedSong] = useState();
     const [newSong, setNewSong] = useState({
         title: '',
         author: '',
@@ -55,6 +58,7 @@ export default function Home() {
     });
     const [editingSong, setEditingSong] = useState(null);
     const [addSongOverlay, setAddSongOverlay] = useState(false);
+    const [message, setMessage] = useState(null);
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
@@ -66,18 +70,20 @@ export default function Home() {
 
     const handleEdit = (song) => {
         setEditingSong(song)
-    }
+    };
 
     const handleEditInput = (e) => {
         const { name, value } = e.target;
         setEditingSong({ ...editingSong, [name]: value });
-    }
+    };
 
     const handleSongUpdate = (e) => {
         e.preventDefault();
         setSongs(songs.map((song) => (song.id === editingSong.id ? editingSong : song)));
         setEditingSong(null);
-    }
+        setMessage("Song Edited!")
+        setTimeout(() => { setMessage(null) }, 2000);
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -98,23 +104,35 @@ export default function Home() {
             image_link: '',
             song_link: ''
         });
+        setMessage("Song Added!")
+        setTimeout(() => { setMessage(null) }, 2000);
     };
 
     function toggleAddSong() {
-        setAddSongOverlay(!addSongOverlay)
-    }
+        setAddSongOverlay(!addSongOverlay);
+    };
 
     function closeEditSong() {
-        setEditingSong(null)
-    }
+        setEditingSong(null);
+    };
 
     useEffect(() => {
-        return () => localStorage.setItem("song", JSON.stringify(songs))
+        return () => localStorage.setItem("song", JSON.stringify(songs));
     }, [songs]);
+
+
 
     return (
         <div className='content'>
-            <EditSong handleSongUpdate={handleSongUpdate} editingSong={editingSong} handleEditInput={handleEditInput} closeEditSong={closeEditSong} />
+            {
+                message ? <Notification message={message} /> : null
+            }
+            <EditSong
+                handleSongUpdate={handleSongUpdate}
+                editingSong={editingSong}
+                handleEditInput={handleEditInput}
+                closeEditSong={closeEditSong} 
+                />
             {addSongOverlay ?
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
                 : null}
