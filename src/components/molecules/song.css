@@ -69,6 +69,12 @@
   justify-content: space-between;
 }
 
+.song-icons {
+  display: flex;
+  gap: 6px;
+}
+
+
 /*Tablet*/
 @media only screen and (max-width: 820px) {
   .playlist-container {
@@ -78,14 +84,61 @@
 }
 
 /*mobile*/
-
 @media screen and (max-width: 600px) {
   .playlist-container {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
   .playlist-song-container {
     width: 80vw;
+  }
+
+  .playlist-song-container {
+    flex-direction: row;
+    width: 65vw;
+    height: 100px;
+    margin: 1rem;
+
+    opacity: 50%;
+    transition: 1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
+  }
+
+  .song-info {
+    width: 100%;
+  }
+
+  .song-author {
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0;
+  }
+
+  .song-image {
+    display: none;
+  }
+
+  .song-title {
+    animation: move 25s linear infinite;
+    height: auto;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .song-interaction {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
   }
 }

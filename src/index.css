@@ -38,7 +38,7 @@
   width: 100vw;
   background-image: url("/App bg.png");
   background-size:cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
 html {

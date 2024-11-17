@@ -16,7 +16,7 @@ export default function Song({ handleSongClick, songs, deleteSong, handleEdit })
                         <p className='song-author'>{song.author}</p>
                         <div className='song-interaction'>
                             <a href={song.song_link} className='song-link' target="_blank" rel="noopener noreferrer">Listen</a>
-                            <div className='flex gap-6'>
+                            <div className='flex song-icons'>
                                 <FaTrash
                                     size={"1.2rem"}
                                     className='icon mt-auto m-0'

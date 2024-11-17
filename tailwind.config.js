@@ -4,24 +4,22 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-   theme: {
+  theme: {
     extend: {
       backgroundImage: {
         'app-bg': "url('/App_bg.png')",
       },
     },
-  },
-  plugins: [],
-  theme: {
     screens: {
       'sm': '414px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 414px) { ... }
 
       'md': '820px',
-      // => @media (min-width: 768px) { ... }
+      // => @media (min-width: 820px) { ... }
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
     }
-  }
-}
+  },
+  plugins: [],
+};

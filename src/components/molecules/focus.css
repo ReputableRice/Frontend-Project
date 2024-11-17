@@ -126,12 +126,15 @@
 }
 
 @media screen and (max-width: 600px) {
+  
   .focus-song {
     justify-content: center;
     flex-direction: row;
+    height: 100px;
   }
 
   .focus-image-link {
+    height: auto;
     border-radius: 1rem 0 0 1rem;
   }
 
@@ -143,13 +146,42 @@
     gap: 0;
     height: auto;
     min-height: auto;
-    padding: 1rem;
+    padding: 0.2rem;
     margin: 0;
     flex-shrink: unset;
+    border: none;
     border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
+  }
+
+  .focus-title {
+    font-size: 1rem;
+  }
+
+  .focus-author {
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: move 25s linear infinite;
+
   }
 
   .focus-desc {
     display: none;
+
+  }
+
+  .focus-link {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
   }
 }

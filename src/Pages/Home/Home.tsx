@@ -137,8 +137,8 @@ export default function Home() {
             <div className='main-container'>
                 <div className='flex left-content'>
                     <div className='playlist-icons'>
-                        <FaBars size={"2.5rem"} className='icon' />
-                        <CgPlayListAdd size={"4em"} className='icon mt-3' onClick={toggleAddSong} />
+                        <FaBars size={"2.5rem"} className='playlist-icon' />
+                        <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
                         <Song handleSongClick={handleSongClick} songs={songs} deleteSong={deleteSong} handleEdit={handleEdit} />

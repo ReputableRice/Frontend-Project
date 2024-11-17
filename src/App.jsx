@@ -17,9 +17,10 @@ function App() {
     <>
       <Router className="">
         <div className='mobileNavTab'>
-          <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />
+          <img src='/TURNTABLE.svg' className='w-64 m-auto' />
+          <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)}/>
         </div>
-        <div className='mobileNav'>
+        <div className='mobileNav flex items-center content-center'>
           {mobileNav ?
             <div className='navBar'>
               <div className='navBarCategories'>
@@ -42,7 +43,7 @@ function App() {
             <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
             <Link to="/About" className={"appRouter nav"}>About</Link>
             <Link to="/Contact" className={"appRouter navRight"}>Contact</Link>
-            <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32'/>
+            <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class' />
           </div>
         </div>
         <Routes>
