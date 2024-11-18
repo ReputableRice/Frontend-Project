@@ -46,7 +46,11 @@
 
 .icon:hover {
     color: var(--n-green);
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
 }
+
+
 
 @media only screen and (max-width:820px) {
     .main-container {
@@ -84,6 +88,8 @@
         bottom: 1rem;
         right: 1rem;
     }
+
+
 
     .right-container {
         height: auto;

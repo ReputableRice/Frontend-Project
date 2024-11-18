@@ -7,14 +7,14 @@
   border-radius: 16px 16px 0px 16px;
   overflow: hidden;
 
-  opacity: 50%;
+  opacity: 75%;
   transition: 1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
 }
 
 .playlist-song-container:hover,
 .playlist-song-container:active {
   opacity: 100%;
-  transform: translateX(80px);
+  transform: translateX(30px);
   color: var(--n-green);
 }
 

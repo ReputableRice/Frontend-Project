@@ -151,12 +151,12 @@ export default function Home() {
             <div className='main-container'>
                 <div className='flex left-content'>
                     <div className='playlist-icons'>
-                        <FaFilter size={"2.5rem"} className='playlist-icon'
+                        <FaFilter size={"2.5rem"} className='playlist-icon icon'
                             onClick={() => { 
                                 setFilter("editing");
                                 setFilterOverlay(true); 
                                 }} />
-                        <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3' onClick={toggleAddSong} />
+                        <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
                         <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />

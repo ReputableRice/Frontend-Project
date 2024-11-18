@@ -24,7 +24,7 @@ export default function Song({ handleSongClick, songs, deleteSong, handleEdit })
                                         deleteSong(song.id);
                                     }}
                                 />
-                                <FaPencil onClick={() => handleEdit(song)} />
+                                <FaPencil onClick={() => handleEdit(song)} className='icon mt-auto m-0' />
                             </div>
                         </div>
                     </div>
