@@ -1,0 +1,47 @@
+.account-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .login-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: black;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .spotify-login-btn {
+    background: #1DB954;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .spotify-login-btn:hover {
+    background: #1ed760;
+  }
+  
+  .profile-section {
+    margin-bottom: 2rem;
+  }
+  
+  .playlists-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.2rem;
+  }

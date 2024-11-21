@@ -5,6 +5,7 @@ import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import Account from './Pages/Account/Account';
 import { useEffect, useState } from 'react';
 import { FaBars, FaX } from 'react-icons/fa6';
 import Preloader from './components/templates/Preloader/Preloader';
@@ -42,6 +43,7 @@ function App() {
             <Link reloadDocument to="/Playlists" className={"appRouter nav"} >Playlists</Link>
             <Link to="/About" className={"appRouter nav"}>About</Link>
             <Link to="/Contact" className={"appRouter navRight"}>Contact</Link>
+            <Link to="/Account" className={"appRouter navRight"}>Account</Link>
             <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class' />
           </div>
         </div>
@@ -50,6 +52,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Playlists" element={<Playlists />} />
+          <Route path="/Account" element={<Account />}/>
         </Routes>
       </Router>
       <Preloader />
