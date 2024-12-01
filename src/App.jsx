@@ -9,10 +9,11 @@ import { FaBars, FaX } from 'react-icons/fa6';
 
 function App() {
   const [mobileNav, setMobileNav] = useState(false);
+  const [mobileCheck, setMobileCheck] = useState(false);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize)
-  })
+  }, [])
 
   const handleResize = () => {
     if (window.innerWidth < 820) {
@@ -27,14 +28,14 @@ function App() {
     <div>
       <div className='mobileNavTab'>
         <img src='/TURNTABLE.svg' className='w-64 m-auto' />
-        <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />
+        <FaBars size={"2rem"} onClick={() => setMobileCheck(true)} />
       </div>
       <div className='mobileNav flex items-center content-center'>
-        {mobileNav ? (
+        {mobileNav && mobileCheck ? (
           <div className='navBar'>
             <div className='navBarCategories'>
               <div className='mobileNavTab'>
-                <FaX size={"2rem"} onClick={() => setMobileNav(false)} />
+                <FaX size={"2rem"} onClick={() => setMobileCheck(false)} />
               </div>
               <Link to="." className={"appRouter navLeft"}>Home</Link>
               <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
