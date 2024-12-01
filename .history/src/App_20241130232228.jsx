@@ -18,6 +18,7 @@ export default function App() {
       '.navBarCategories > *',
       { opacity: 0, x: '-80rem' },
       {
+        delay: 1,
         duration: 2,
         opacity: 1,
         x: 0,
@@ -35,13 +36,12 @@ export default function App() {
         x:-100
       },
       {
-        delay: 1,
         opacity:1,
         duration:2,
         x:0
       }
     )
-  },[])
+  })
 
   return (
     <div className='entireApp'>

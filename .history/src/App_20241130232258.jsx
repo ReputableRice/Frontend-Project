@@ -41,7 +41,7 @@ export default function App() {
         x:0
       }
     )
-  },[])
+  })
 
   return (
     <div className='entireApp'>

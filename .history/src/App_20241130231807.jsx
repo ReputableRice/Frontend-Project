@@ -14,10 +14,14 @@ export default function App() {
   const location = useLocation(); // Track current route
 
   useEffect(() => {
-    gsap.fromTo(
-      '.navBarCategories > *',
+    const navItems = document.querySelectorAll('.navBarCategories > *');
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      navItems,
       { opacity: 0, x: '-80rem' },
       {
+        delay: 1,
         duration: 2,
         opacity: 1,
         x: 0,
@@ -27,24 +31,8 @@ export default function App() {
     );
   }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      '.entireApp',
-      {
-        opacity:0,
-        x:-100
-      },
-      {
-        delay: 1,
-        opacity:1,
-        duration:2,
-        x:0
-      }
-    )
-  },[])
-
   return (
-    <div className='entireApp'>
+    <div>
       <div className='mobileNavTab'>
         <img src='/TURNTABLE.svg' className='w-64 m-auto' />
         <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />

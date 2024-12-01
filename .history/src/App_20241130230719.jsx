@@ -9,15 +9,18 @@ import { FaBars, FaX } from 'react-icons/fa6';
 import { gsap } from 'gsap';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-export default function App() {
+function App() {
   const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation(); // Track current route
 
   useEffect(() => {
+    const navItems = document.querySelectorAll('.navBarCategories > *');
+
     gsap.fromTo(
-      '.navBarCategories > *',
+      navItems,
       { opacity: 0, x: '-80rem' },
       {
+        delay: 1,
         duration: 2,
         opacity: 1,
         x: 0,
@@ -27,24 +30,8 @@ export default function App() {
     );
   }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      '.entireApp',
-      {
-        opacity:0,
-        x:-100
-      },
-      {
-        delay: 1,
-        opacity:1,
-        duration:2,
-        x:0
-      }
-    )
-  },[])
-
   return (
-    <div className='entireApp'>
+    <div>
       <div className='mobileNavTab'>
         <img src='/TURNTABLE.svg' className='w-64 m-auto' />
         <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />
@@ -83,11 +70,11 @@ export default function App() {
             gsap.fromTo(
               node,
               { opacity: 0, y: 50 },
-              { opacity: 1, y: 0, duration: 1, ease: "power4.inOut" }
+              { opacity: 1, y: 0, duration: 1, ease: "power4.out" }
             );
           }}
           onExit={(node) => {
-            gsap.to(node, { opacity: 0, duration:0.00000000000000000000000000000000000000000000001 }); //DONT CLICK THROUGH THE ROUTES TOO FAST
+            gsap.to(node, { opacity: 0, delay:2, y: -50, duration: 0.5, ease: "power4.in" });
           }}
         >
           <Routes location={location}>
@@ -101,3 +88,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

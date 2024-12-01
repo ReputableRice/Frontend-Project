@@ -14,10 +14,14 @@ export default function App() {
   const location = useLocation(); // Track current route
 
   useEffect(() => {
-    gsap.fromTo(
-      '.navBarCategories > *',
+    const navItems = document.querySelectorAll('.navBarCategories > *');
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      navItems,
       { opacity: 0, x: '-80rem' },
       {
+        delay: 1,
         duration: 2,
         opacity: 1,
         x: 0,
@@ -32,16 +36,15 @@ export default function App() {
       '.entireApp',
       {
         opacity:0,
-        x:-100
+        x:100
       },
       {
-        delay: 1,
         opacity:1,
         duration:2,
         x:0
       }
     )
-  },[])
+  })
 
   return (
     <div className='entireApp'>
