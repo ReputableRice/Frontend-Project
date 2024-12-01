@@ -28,7 +28,6 @@ export default function Focus({ selectedSong }) {
                     <p className='focus-item focus-desc'>{selectedSong.song_desc}</p>
                     <a className='focus-item song-link focus-link flex items-center' href={selectedSong.song_link} target="_blank">
                         Listen
-                        <CgMusic size={"1.5rem"} className='ml-1 mt-1'/>
                     </a>
                 </div>
             </div>
