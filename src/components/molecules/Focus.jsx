@@ -20,15 +20,14 @@ export default function Focus({ selectedSong }) {
                     className='focus-image-link'
                 />
                 <div className='focus-info flex'>
-                    <p className='focus-item focus-title'>{selectedSong.title}</p>
+                    <h1 className='focus-item focus-title'>{selectedSong.title}</h1>
                     <div className='focus-item focus-wide flex'>
                         <p className='focus-item focus-song-author focus-author'>{selectedSong.author}</p>
                         {/* <p className='focus-item focus-author focus-date'>{selectedSong.date}</p>*/}
                     </div>
                     <p className='focus-item focus-desc'>{selectedSong.song_desc}</p>
-                    <a className='focus-item song-link focus-link flex' href={selectedSong.song_link} target="_blank">
+                    <a className='focus-item song-link focus-link flex items-center' href={selectedSong.song_link} target="_blank">
                         Listen
-                        <CgMusic size={"1rem"} className='ml-1 mt-1'/>
                     </a>
                 </div>
             </div>

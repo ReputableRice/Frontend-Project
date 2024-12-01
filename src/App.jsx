@@ -4,24 +4,38 @@ import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaBars, FaX } from 'react-icons/fa6';
 
 function App() {
   const [mobileNav, setMobileNav] = useState(false);
+  const [mobileCheck, setMobileCheck] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  }, [])
+
+  const handleResize = () => {
+    if (window.innerWidth < 820) {
+      setMobileNav(true)
+    } else {
+      setMobileNav(false)
+    }
+  }
+
 
   return (
     <div>
       <div className='mobileNavTab'>
-        <img src='/TURNTABLE.svg' className='w-64 m-auto' />
-        <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)} />
+        <img src='/TURNTABLE.svg' className='w-64 m-auto' alt='Turntable logo' />
+        <FaBars size={"2rem"} onClick={() => setMobileCheck(true)} />
       </div>
       <div className='mobileNav flex items-center content-center'>
-        {mobileNav ? (
+        {mobileNav && mobileCheck ? (
           <div className='navBar'>
             <div className='navBarCategories'>
               <div className='mobileNavTab'>
-                <FaX size={"2rem"} onClick={() => setMobileNav(false)} />
+                <FaX size={"2rem"} onClick={() => setMobileCheck(false)} />
               </div>
               <Link to="." className={"appRouter navLeft"}>Home</Link>
               <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
@@ -37,7 +51,7 @@ function App() {
           <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
           <Link to="about" className={"appRouter nav"}>About</Link>
           <Link to="contact" className={"appRouter navRight"}>Contact</Link>
-          <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class' />
+          <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class turntableLogo' />
         </div>
       </div>
       <Routes>

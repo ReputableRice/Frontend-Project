@@ -18,6 +18,7 @@
   right: 72px;
 
   transition: all 1s cubic-bezier(0, 0.98, 0.92, 0.06);
+  animation: fadeIn 2s cubic-bezier(0.17, 0.67, 0, 1.02);
 }
 
 .visible {
@@ -32,8 +33,27 @@
 
 /*mobile*/
 @media screen and (max-width: 600px) {
-    .notificationBorder {
-        bottom: 0;
-        right: 0;      
-      }
+  .notificationBorder {
+    bottom: 0;
+    right: 0;
   }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}

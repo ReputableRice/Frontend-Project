@@ -15,7 +15,7 @@ export default function Notification({ message }) {
 
     return (
         <>
-            <div className={`${styles.notificationBorder} ${styles[notiStyle]}`}>
+            <div className={`${styles.notificationBorder} ${styles[notiStyle]}`} >
                 <div> {message} </div>
             </div>
         </>

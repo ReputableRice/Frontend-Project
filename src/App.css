@@ -60,6 +60,13 @@
   display: none;
 }
 
+
+@media only screen and (max-width: 1000px) {
+  .turntableLogo {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 820px) {
   .navBar {
     width: 100vw;
@@ -81,10 +88,12 @@
     padding: 0.5rem 2rem;
     overflow: hidden;
 
+    animation: fadeMobile 1s cubic-bezier(.17,.67,0,1.02);
     transition: cubic-bezier(0.18, 0.69, 0.23, 0.99) 0.5s;
     transform: skew(0);
 
     font-size: 24px;
+
   }
 
   .appRouter:hover {
@@ -118,5 +127,20 @@
   
   .desktopNav {
     display: none;
+  }
+
+  .turntableLogo {
+    display: none;
+  }
+}
+
+@keyframes fadeMobile {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
