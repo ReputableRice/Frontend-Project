@@ -51,7 +51,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
-      </div>
+      </Router>
       {/* <Preloader /> */}
     </>
   )

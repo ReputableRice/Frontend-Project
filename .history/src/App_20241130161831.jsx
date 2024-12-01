@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      <Router className="">
         <div className='mobileNavTab'>
           <img src='/TURNTABLE.svg' className='w-64 m-auto' />
           <FaBars size={"2rem"} onClick={() => setMobileNav(!mobileNav)}/>
@@ -51,8 +51,8 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Playlists" element={<Playlists />} />
         </Routes>
-      </div>
-      {/* <Preloader /> */}
+      </Router>
+      <Preloader />
     </>
   )
 }
