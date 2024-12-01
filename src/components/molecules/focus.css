@@ -14,16 +14,12 @@
 
 .focus-image-link {
   justify-content: center;
-  background-color: #555;
-
-  width: 100%;
+  background-color: var(--black);
 
   height: 510px;
   border-radius: 32px 32px 0px 32px;
 
   overflow: hidden;
-
-  object-fit: cover;
 }
 
 .focus-info {
@@ -31,7 +27,6 @@
 
   display: flex;
   width: 100%;
-  max-width: 100%;
   min-height: 233px;
   padding: 16px;
   flex-direction: column;
@@ -111,6 +106,21 @@
   background: transparent;
 }
 
+.mobilePlayer {
+  display: none;
+  transition: 1s cubic-bezier(0.17, 0.67, 0, 1.02);
+}
+
+.playbackIcon {
+  transition: 1s cubic-bezier(0.17, 0.67, 0, 1.02);
+}
+
+.mobilePlayer:active,
+.mobilePlayer:hover {
+  transform: scale(1.1);
+  color: var(--n-green);
+}
+
 @media only screen and (max-width: 820px) {
   .focus-song {
     flex-direction: column;
@@ -138,6 +148,7 @@
 
   .focus-image-link {
     height: 200px;
+    width: 100%;
   }
 }
 
@@ -149,7 +160,7 @@
   }
 
   .focus-image-link {
-    height: auto;
+    height: 100%;
     border-radius: 1rem 0 0 1rem;
   }
 
@@ -191,6 +202,11 @@
     border-radius: 1rem 0 0 0;
 
     margin-top: auto;
+  }
+
+  .mobilePlayer {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

@@ -11,6 +11,7 @@ import EditSong from '../../components/templates/EditSong/EditSong';
 import Notification from '../../components/templates/Notification/Notification';
 import { BiFilter } from 'react-icons/bi';
 import { FaFilter } from 'react-icons/fa6';
+import ReactPlayer from 'react-player'
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -34,10 +35,10 @@ export default function Home() {
             },
             {
                 id: nanoid(),
-                title: 'jschlatt — Santa Claus Is Coming To Town (Official)',
+                title: 'jschlatt — A Very 1999 Christmas (Full Album)',
                 image_link: "https://i.ytimg.com/vi/hayoY2Ov8PM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCccpnkxaz6_w9igkfcX01UFCAlSQ",
                 author: "JSchlatt",
-                song_link: "https://www.youtube.com/watch?v=hayoY2Ov8PM",
+                song_link: "https://www.youtube.com/watch?v=JjjNa8khhww",
                 song_desc: "MERRY CHRISTMAS BABY!!!!!!"
             },
             {
