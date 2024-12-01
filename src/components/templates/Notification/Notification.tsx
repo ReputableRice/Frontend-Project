@@ -14,10 +14,10 @@ export default function Notification({ message }) {
     }, [message])
 
     return (
-        <>
+        <div className="overflow-hidden w-full h-full">
             <div className={`${styles.notificationBorder} ${styles[notiStyle]}`} >
                 <div> {message} </div>
             </div>
-        </>
+        </div>
     )
 }

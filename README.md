@@ -9,8 +9,8 @@ An app for storing and managing your favourite songs!
 - nanoid
 - react-router-dom
 - react-social-icons
-- tailwind-css
 - local-storage
+- react-player
 
 ## Breakpoints / Responsiveness
 - This app is responsive to the following points: 
