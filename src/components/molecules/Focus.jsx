@@ -13,20 +13,6 @@ Only thing missing is spotify
 
 export default function Focus({ selectedSong }) {
     const [pause, setPaused] = useState(true)
-    const [videoHeight, setVideoHeight] = useState("")
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize)
-    }, [])
-
-    const handleResize = () => {
-        if (window.innerWidth < 601) {
-            setVideoHeight("100%")
-        } else {
-            setVideoHeight("100%")
-        }
-    }
-
     return (
         <div>
             <div className='focus-container flex'>
@@ -39,14 +25,17 @@ export default function Focus({ selectedSong }) {
                             playing={pause}
                             controls
                             width="100%"
-                            height={videoHeight}
-                            className="object-fill"
+                            height="100%"
+                            className="youtubePlayer"
                         />
                     </div>
                     <div className='focus-info flex'>
-                        <h1 className='focus-item focus-title'>{selectedSong.title}</h1>
+                        <h1 className='flex flex-col leading-8'>
+                            Now Playing:
+                            <h1 className='focus-item focus-title leading-6 mt-1'>{selectedSong.title}</h1>
+                        </h1>
                         <div className='focus-item focus-wide flex'>
-                            <p className='focus-item focus-song-author focus-author'>{selectedSong.author}</p>
+                            <p className='focus-item focus-song-author focus-author leading-3 mt-8'>{selectedSong.author}</p>
                             {/* <p className='focus-item focus-author focus-date'>{selectedSong.date}</p>*/}
                         </div>
                         <p className='focus-item focus-desc'>{selectedSong.song_desc}</p>

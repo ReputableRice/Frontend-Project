@@ -1,0 +1,21 @@
+.discPosition {
+    bottom: 50px;
+    right: 100px;
+    animation: rotate 24s linear;
+}
+
+@media only screen and (max-width: 820px) {
+    .discPosition {
+        bottom: 50px;
+        left: 100px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

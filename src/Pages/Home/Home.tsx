@@ -12,6 +12,7 @@ import Notification from '../../components/templates/Notification/Notification';
 import { BiFilter } from 'react-icons/bi';
 import { FaFilter } from 'react-icons/fa6';
 import ReactPlayer from 'react-player'
+import Disc from '../../components/molecules/disc/Disc';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -155,41 +156,44 @@ export default function Home() {
     }
 
     return (
-        <div className='content'>
-            {message && <Notification message={message} />}
-            <EditSong
-                handleSongUpdate={handleSongUpdate}
-                editingSong={editingSong}
-                handleEditInput={handleEditInput}
-                closeEditSong={closeEditSong}
-            />
-            {filterOverlay &&
-                <Filter
-                    ReverseAlpha={() => setFilter("reversealpha")}
-                    Alphabetical={() => setFilter("alpha")}
-                    closeFilter={closeFilter}
-                />}
-            {addSongOverlay && (
-                <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
-            )}
-            <div className='main-container'>
-                <div className='flex left-content'>
-                    <div className='playlist-icons'>
-                        <FaFilter size={"2.5rem"} className='playlist-icon icon'
-                            onClick={() => {
-                                setFilter("editing");
-                                setFilterOverlay(true);
-                                setAddSongOverlay(false);
-                                setEditingSong(null)
-                            }} />
-                        <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
+        <div>
+            <Disc focus={focus} />
+            <div className='content'>
+                {message && <Notification message={message} />}
+                <EditSong
+                    handleSongUpdate={handleSongUpdate}
+                    editingSong={editingSong}
+                    handleEditInput={handleEditInput}
+                    closeEditSong={closeEditSong}
+                />
+                {filterOverlay &&
+                    <Filter
+                        ReverseAlpha={() => setFilter("reversealpha")}
+                        Alphabetical={() => setFilter("alpha")}
+                        closeFilter={closeFilter}
+                    />}
+                {addSongOverlay && (
+                    <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
+                )}
+                <div className='main-container'>
+                    <div className='flex left-content'>
+                        <div className='playlist-icons'>
+                            <FaFilter size={"2.5rem"} className='playlist-icon icon'
+                                onClick={() => {
+                                    setFilter("editing");
+                                    setFilterOverlay(true);
+                                    setAddSongOverlay(false);
+                                    setEditingSong(null)
+                                }} />
+                            <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
+                        </div>
+                        <div className='left-container'>
+                            <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
+                        </div>
                     </div>
-                    <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
+                    <div className='right-container'>
+                        {focus && <Focus selectedSong={selectedSong} />}
                     </div>
-                </div>
-                <div className='right-container'>
-                    {focus && <Focus selectedSong={selectedSong} />}
                 </div>
             </div>
         </div>
