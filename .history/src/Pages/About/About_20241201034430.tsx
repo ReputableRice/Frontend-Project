@@ -42,17 +42,17 @@ export default function About() {
                             <p className="moodText">You selected the <span className="highlight">{selectedMood}</span> mood! Here's a song suggestion:</p>
                         )}
                         {selectedMood === 'Happy' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Happy" by Pharrell Williams 🎶</p></a> }
-                        {selectedMood === 'Sad' && <a href="https://www.youtube.com/watch?v=k4V3Mo61fJM" target="_blank" rel="noopener noreferrer"><p className="highlight">"Fix You" by Coldplay 🎧</p></a>}
-                        {selectedMood === 'Chill' && <a href="https://www.youtube.com/watch?v=UfcAVejslrU" target="_blank" rel="noopener noreferrer"><p className="highlight">"Weightless" by Marconi Union 🌙</p></a>}
-                        {selectedMood === 'Energetic' && <a href="https://www.youtube.com/watch?v=yd8jh9QYfEs" target="_blank" rel="noopener noreferrer"><p className="highlight">"Don't Stop the Music" by Rihanna 🎶</p></a>}
-                        {selectedMood === 'Romantic' && <a href="https://www.youtube.com/watch?v=450p7goxZqg" target="_blank" rel="noopener noreferrer"><p className="highlight">"All of Me" by John Legend 🎧</p></a>}
-                        {selectedMood === 'Angry' && <a href="https://www.youtube.com/watch?v=ZpUYjpKg9KY" target="_blank" rel="noopener noreferrer"><p className="highlight">"Break Stuff" by Limp Bizkit🌙</p></a>}
-                        {selectedMood === 'Nostalgic' && <a href="https://www.youtube.com/watch?v=1w7OgIMMRc4" target="_blank" rel="noopener noreferrer"><p className="highlight">"Sweet Child O' Mine" by Guns N' Roses 🎶</p></a>}
-                        {selectedMood === 'Motivational' && <a href="https://www.youtube.com/watch?v=j5-yKhDd64s&list=PLgzTt0k8mXzH4S1z0Ny3y2mTkIMSf7APH" target="_blank" rel="noopener noreferrer"><p className="highlight">"Not Afriad" by Eminem 🎧</p></a>}
-                        {selectedMood === 'Focused' && <a href="https://www.youtube.com/watch?v=dX3k_QDnzHE" target="_blank" rel="noopener noreferrer"><p className="highlight">"Midnight City" by M83 🌙</p></a>}
-                        {selectedMood === 'Relaxed' && <a href="https://www.youtube.com/watch?v=m-v-LGOfaKo" target="_blank" rel="noopener noreferrer"><p className="highlight">"Banana Pancakes" by Jack Johnson 🎶</p></a>}
-                        {selectedMood === 'Adventurous' && <a href="https://www.youtube.com/watch?v=IGMabBGydC0" target="_blank" rel="noopener noreferrer"><p className="highlight">"Send Me On My Way" by Rusted Root🎧</p></a>}
-                        {selectedMood === 'Introspective' && <a href="https://www.youtube.com/watch?v=l0q7MLPo-u8" target="_blank" rel="noopener noreferrer"><p className="highlight">"The Sound of Silence" by Simon & Garfunkel 🌙</p></a>}
+                        {selectedMood === 'Sad' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Fix You" by Coldplay 🎧</p></a>}
+                        {selectedMood === 'Chill' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Weightless" by Marconi Union 🌙</p></a>}
+                        {selectedMood === 'Energetic' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Don't Stop the Music" by Rihanna 🎶</p></a>}
+                        {selectedMood === 'Romantic' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"All of Me" by John Legend 🎧</p></a>}
+                        {selectedMood === 'Angry' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Break Stuff" by Limp Bizkit🌙</p>}</a>
+                        {selectedMood === 'Nostalgic' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Sweet Child O' Mine" by Guns N' Roses 🎶</p></a>}
+                        {selectedMood === 'Motivational' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Eye of the Tiger" by Survivor 🎧</p></a>}
+                        {selectedMood === 'Focused' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Midnight City" by M83 🌙</p></a>}
+                        {selectedMood === 'Relaxed' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Banana Pancakes" by Jack Johnson 🎶</p></a>}
+                        {selectedMood === 'Adventurous' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"Send Me On My Way" by Rusted Root🎧</p></a>}
+                        {selectedMood === 'Introspective' && <a href="https://youtu.be/ZbZSe6N_BXs?si=eo5zg15OnVdEU6bc" target="_blank" rel="noopener noreferrer"><p className="highlight">"The Sound of Silence" by Simon & Garfunkel 🌙</p></a>}
                     </div>
                     <div className="moodButtons">
                         <button onClick={() => handleMoodChange('Happy')} className="moodButton">Happy</button>

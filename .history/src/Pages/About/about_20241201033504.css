@@ -35,8 +35,8 @@ html, body {
 }
 
 .aboutDescription:nth-of-type(2) {
-    border-bottom: 3px solid var(--n-green); 
-    padding-bottom: 30px;  
+    border-bottom: 5px solid var(--n-green); 
+    padding-bottom: 50px;  
     border-radius: 3px;
 }
 
@@ -113,8 +113,6 @@ html, body {
     font-size: 1.8rem;
     color: #fff;
     margin-right: 15px;
-    margin-top:20px;
-    margin-bottom:30px;
 }
 
 .moodButtons {

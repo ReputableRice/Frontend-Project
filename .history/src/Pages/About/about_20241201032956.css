@@ -34,14 +34,8 @@ html, body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.aboutDescription:nth-of-type(2) {
-    border-bottom: 3px solid var(--n-green); 
-    padding-bottom: 30px;  
-    border-radius: 3px;
-}
-
 .aboutContainer::-webkit-scrollbar {
-    width: 10px; 
+    width: 100px; 
 }
 
 .aboutContainer::-webkit-scrollbar-track {
@@ -113,8 +107,6 @@ html, body {
     font-size: 1.8rem;
     color: #fff;
     margin-right: 15px;
-    margin-top:20px;
-    margin-bottom:30px;
 }
 
 .moodButtons {
