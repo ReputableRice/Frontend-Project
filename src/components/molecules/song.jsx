@@ -15,21 +15,19 @@ export default function Song({ handleSongClick, songs, deleteSong, handleEdit })
                         <h3 className='song-title'>{song.title}</h3>
                         <p className='song-author'>{song.author}</p>
                         <div className='song-interaction'>
-                            <a href={song.song_link} className='song-link' target="_blank" rel="noopener noreferrer">Listen</a>
                             <div className='flex song-icons'>
                                 <FaPencil
                                     onClick={() => handleEdit(song)}
                                     className='song-icon mt-auto m-0'
-                                    size={"1.5rem"}
+                                    size={"2rem"}
                                 />
                                 <FaTrash
-                                    size={"1.5rem"}
+                                    size={"2rem"}
                                     className='song-icon mt-auto m-0'
                                     onClick={(e) => {
                                         deleteSong(song.id);
                                     }}
                                 />
-
                             </div>
                         </div>
                     </div>

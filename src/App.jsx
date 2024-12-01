@@ -27,7 +27,7 @@ function App() {
   return (
     <div>
       <div className='mobileNavTab'>
-        <img src='/TURNTABLE.svg' className='w-64 m-auto' />
+        <img src='/TURNTABLE.svg' className='w-64 m-auto' alt='Turntable logo' />
         <FaBars size={"2rem"} onClick={() => setMobileCheck(true)} />
       </div>
       <div className='mobileNav flex items-center content-center'>
