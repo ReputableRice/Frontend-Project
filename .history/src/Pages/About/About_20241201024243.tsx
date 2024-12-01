@@ -25,15 +25,8 @@ export default function About() {
                         visually capturing the emotions or memories tied to each track. Whether you're building a playlist for
                         every mood or reminiscing on a special tune, <span className="highlight">Turntable</span> makes managing
                         your music personal and fun.
-                    </p>                
-                    <img 
-                        src="https://images.unsplash.com/photo-1603721726856-cdf9223d9d95?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                        alt="interface" 
-                        className="studioGraphic" 
-                    />
+                    </p>
                 </div>
-
-                <h2 className="interactiveTitle">Choose Your Mood</h2>
             <div className="aboutGraphic">
                     <img 
                         src="https://pngimg.com/uploads/vinyl/vinyl_PNG48.png" 
@@ -42,29 +35,13 @@ export default function About() {
                     />
                 </div>            
                 <div className="aboutInteractive">
-                    
-                    <div className="moodDescription">
-                        {selectedMood && (
-                            <p className="moodText">You selected the <span className="highlight">{selectedMood}</span> mood! Here's a song suggestion:</p>
-                        )}
-                        {selectedMood === 'Happy' && <p className="highlight">"Happy" by Pharrell Williams 🎶</p>}
-                        {selectedMood === 'Sad' && <p className="highlight">"Fix You" by Coldplay 🎧</p>}
-                        {selectedMood === 'Chill' && <p className="highlight">"Weightless" by Marconi Union 🌙</p>}
-                        {selectedMood === 'Energetic' && <p className="highlight">"Don't Stop the Music" by Rihanna 🎶</p>}
-                        {selectedMood === 'Romantic' && <p className="highlight">"All of Me" by John Legend 🎧</p>}
-                        {selectedMood === 'Angry' && <p className="highlight">"Break Stuff" by Limp Bizkit🌙</p>}
-                        {selectedMood === 'Nostalgic' && <p className="highlight">"Sweet Child O' Mine" by Guns N' Roses 🎶</p>}
-                        {selectedMood === 'Motivational' && <p className="highlight">"Eye of the Tiger" by Survivor 🎧</p>}
-                        {selectedMood === 'Focused' && <p className="highlight">"Midnight City" by M83 🌙</p>}
-                        {selectedMood === 'Relaxed' && <p className="highlight">"Banana Pancakes" by Jack Johnson 🎶</p>}
-                        {selectedMood === 'Adventurous' && <p className="highlight">"Send Me On My Way" by Rusted Root🎧</p>}
-                        {selectedMood === 'Introspective' && <p className="highlight">"The Sound of Silence" by Simon & Garfunkel 🌙</p>}
-                    </div>
+                    <h2 className="interactiveTitle">Choose Your Mood</h2>
                     <div className="moodButtons">
                         <button onClick={() => handleMoodChange('Happy')} className="moodButton">Happy</button>
                         <button onClick={() => handleMoodChange('Sad')} className="moodButton">Sad</button>
                         <button onClick={() => handleMoodChange('Chill')} className="moodButton">Chill</button>
                         <button onClick={() => handleMoodChange('Energetic')} className="moodButton">Energetic</button>
+                        <br/>
                         <button onClick={() => handleMoodChange('Romantic')} className="moodButton">Romantic</button>
                         <button onClick={() => handleMoodChange('Angry')} className="moodButton">Angry</button>
                         <button onClick={() => handleMoodChange('Nostalgic')} className="moodButton">Nostalgic</button>
@@ -73,6 +50,23 @@ export default function About() {
                         <button onClick={() => handleMoodChange('Relaxed')} className="moodButton">Relaxed</button>
                         <button onClick={() => handleMoodChange('Adventurous')} className="moodButton">Adventurous</button>
                         <button onClick={() => handleMoodChange('Introspective')} className="moodButton">Introspective</button>
+                    </div>
+                    <div className="moodDescription">
+                        {selectedMood && (
+                            <p className="moodText">You selected the {selectedMood} mood! Here's a song suggestion:</p>
+                        )}
+                        {selectedMood === 'Happy' && <p className="highlight">Songs for a cheerful vibe! 🎶</p>}
+                        {selectedMood === 'Sad' && <p className="highlight">Songs to match your mood. 🎧</p>}
+                        {selectedMood === 'Chill' && <p className="highlight">Relaxing tunes for a calm day. 🌙</p>}
+                        {selectedMood === 'Energetic' && <p className="highlight">Songs for a cheerful vibe! 🎶</p>}
+                        {selectedMood === 'Romantic' && <p className="highlight">Songs to match your mood. 🎧</p>}
+                        {selectedMood === 'Angry' && <p className="highlight">Relaxing tunes for a calm day. 🌙</p>}
+                        {selectedMood === 'Nostalgic' && <p className="highlight">Songs for a cheerful vibe! 🎶</p>}
+                        {selectedMood === 'Motivational' && <p className="highlight">Songs to match your mood. 🎧</p>}
+                        {selectedMood === 'Focused' && <p className="highlight">Relaxing tunes for a calm day. 🌙</p>}
+                        {selectedMood === 'Relaxed' && <p className="highlight">Songs for a cheerful vibe! 🎶</p>}
+                        {selectedMood === 'Adventurous' && <p className="highlight">Songs to match your mood. 🎧</p>}
+                        {selectedMood === 'Introspective' && <p className="highlight">Relaxing tunes for a calm day. 🌙</p>}
                     </div>
             </div>                
         </div>

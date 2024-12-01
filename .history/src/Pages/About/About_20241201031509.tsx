@@ -25,22 +25,19 @@ export default function About() {
                         visually capturing the emotions or memories tied to each track. Whether you're building a playlist for
                         every mood or reminiscing on a special tune, <span className="highlight">Turntable</span> makes managing
                         your music personal and fun.
-                    </p>                
-                    <img 
+                    </p>
+                </div>
+                <img 
                         src="https://images.unsplash.com/photo-1603721726856-cdf9223d9d95?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                         alt="interface" 
                         className="studioGraphic" 
                     />
-                </div>
-
                 <h2 className="interactiveTitle">Choose Your Mood</h2>
-            <div className="aboutGraphic">
                     <img 
                         src="https://pngimg.com/uploads/vinyl/vinyl_PNG48.png" 
                         alt="Turntable" 
                         className="turntableGraphic" 
-                    />
-                </div>            
+                    />          
                 <div className="aboutInteractive">
                     
                     <div className="moodDescription">

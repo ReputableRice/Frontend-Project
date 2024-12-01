@@ -1,0 +1,127 @@
+.aboutContainer {
+    display: flex;
+}
+
+.aboutBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faqHeading {
+    font-size: var(--h1);
+}
+
+.aboutDescription {
+    max-width: 54.6875rem;
+}
+
+@media only screen and (max-width:820px) {
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardContainer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutTitle {
+        font-size: 2rem;
+    }
+
+    .aboutDescription {
+        font-size: 1rem;
+    }
+}
+
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.timelineStep {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelinePoint {
+    width: 20px;
+    height: 20px;
+    background-color: var(--n-green);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.timelineLine {
+    width: 3px;
+    height: 60px;
+    background-color: var(--n-green);
+}
+
+.timelineStep.active .timelinePoint {
+    background-color: #fff;
+}
+
+.timelineContent {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.timelineContent img {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.aboutDescription {
+    max-width: 60rem;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.aboutTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--n-green);
+}
+
+.turntableGraphic {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.highlight {
+    color: var(--n-green);
+    font-weight: bold;
+}
