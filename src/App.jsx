@@ -37,7 +37,7 @@ function App() {
           <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
           <Link to="about" className={"appRouter nav"}>About</Link>
           <Link to="contact" className={"appRouter navRight"}>Contact</Link>
-          <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class' />
+          <img src='/TURNTABLE.svg' className='w-64 ml-auto mr-32 class turntableLogo' />
         </div>
       </div>
       <Routes>

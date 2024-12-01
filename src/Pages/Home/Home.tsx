@@ -51,6 +51,8 @@ export default function Home() {
         ];
     });
 
+    const [focus, setFocus] = useState(false)
+
     const [selectedSong, setSelectedSong] = useState(songs[0]);
     const [newSong, setNewSong] = useState({
         title: '',
@@ -76,6 +78,14 @@ export default function Home() {
 
     const handleSongClick = (song) => {
         setSelectedSong(song);
+
+        //Resetting code to trigger animation
+        if (focus) {
+            setFocus(false)
+            setTimeout(() => setFocus(true), 100)
+        } else {
+            setFocus(true)
+        }
     };
 
     const deleteSong = (id) => {
@@ -126,14 +136,18 @@ export default function Home() {
 
         if (filter === "reversealpha") {
             updatedSongs.sort((a, b) => b.title.localeCompare(a.title));
-            setFilterOverlay(false); 
+            setFilterOverlay(false);
         } else if (filter === "alpha") {
             updatedSongs.sort((a, b) => a.title.localeCompare(b.title));
-            setFilterOverlay(false); 
+            setFilterOverlay(false);
         }
 
         setFilteredSongs(updatedSongs);
     };
+
+    const closeFilter = () => {
+        setFilterOverlay(false)
+    }
 
     return (
         <div className='content'>
@@ -144,7 +158,12 @@ export default function Home() {
                 handleEditInput={handleEditInput}
                 closeEditSong={closeEditSong}
             />
-            {filterOverlay && <Filter ReverseAlpha={() => setFilter("reversealpha")} Alphabetical={() => setFilter("alpha")} />}
+            {filterOverlay &&
+                <Filter
+                    ReverseAlpha={() => setFilter("reversealpha")}
+                    Alphabetical={() => setFilter("alpha")}
+                    closeFilter={closeFilter}
+                />}
             {addSongOverlay && (
                 <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
             )}
@@ -152,10 +171,10 @@ export default function Home() {
                 <div className='flex left-content'>
                     <div className='playlist-icons'>
                         <FaFilter size={"2.5rem"} className='playlist-icon icon'
-                            onClick={() => { 
+                            onClick={() => {
                                 setFilter("editing");
-                                setFilterOverlay(true); 
-                                }} />
+                                setFilterOverlay(true);
+                            }} />
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
@@ -163,7 +182,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='right-container'>
-                    <Focus selectedSong={selectedSong} />
+                    {focus && <Focus selectedSong={selectedSong} />}
                 </div>
             </div>
         </div>

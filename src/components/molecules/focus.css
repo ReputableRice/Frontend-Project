@@ -5,6 +5,7 @@
 .focus-container {
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 1s cubic-bezier(.17,.67,0,1.02);
 }
 
 .focus-song {
@@ -30,6 +31,7 @@
 
   display: flex;
   width: 696px;
+  max-width: 100%;
   min-height: 233px;
   padding: 16px;
   flex-direction: column;
@@ -186,5 +188,16 @@
 
   100% {
     transform: translate(-100%, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

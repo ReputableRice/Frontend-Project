@@ -12,7 +12,7 @@ export default function Song({ handleSongClick, songs, deleteSong, handleEdit })
                         <img className='song-image' src={song.image_link} alt={song.title} />
                     </div>
                     <div className='flex flex-col song-info'>
-                        <p className='song-title'>{song.title}</p>
+                        <h3 className='song-title'>{song.title}</h3>
                         <p className='song-author'>{song.author}</p>
                         <div className='song-interaction'>
                             <a href={song.song_link} className='song-link' target="_blank" rel="noopener noreferrer">Listen</a>
