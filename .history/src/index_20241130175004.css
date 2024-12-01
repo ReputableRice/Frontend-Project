@@ -1,0 +1,73 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+@font-face {
+  font-family: "SDK_US_Web";
+  src: local("SDK_US_Web"),
+    url('./assets/fonts/en-us.ttf')
+}
+
+:root {
+  font-family: SDK_US_Web, Inter, system-ui, Avenir, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --white: #FFFEFB;
+  --black: #000000;
+  --grey: #676364;
+  --n-green: #E6FE5D;
+  --red: #F70306;
+  --d-grey: #353837;
+
+  --h1: 1.5rem
+
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/App bg.png");
+  background-size:cover;
+  background-repeat: repeat-y;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+body {
+  width: 100vw;
+}
+
+body .content {
+  margin: 0 8.438vw;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width:600px) {
+  body .content {
+    margin: 0 1rem;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+}

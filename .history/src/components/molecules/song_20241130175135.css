@@ -6,7 +6,6 @@
   background-color: #555;
   border-radius: 16px 16px 0px 16px;
   overflow: hidden;
-  cursor: pointer;
 
   opacity: 75%;
   transition: 1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
@@ -16,7 +15,7 @@
 .playlist-song-container:active {
   opacity: 100%;
   /* transform: translateX(300px); */
-  /* scale: 300%; */
+  scale: 200%;
   color: var(--n-green);
 }
 
