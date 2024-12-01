@@ -42,6 +42,7 @@
     height: 80vh;
     max-height: 1080px;
     margin-left: 2rem;
+    overflow: hidden;
 }
 
 .icon:hover {

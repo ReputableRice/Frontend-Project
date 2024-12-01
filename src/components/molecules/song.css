@@ -9,7 +9,6 @@
   cursor: pointer;
 
   opacity: 75%;
-  transition: 0.1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
 }
 
 .playlist-song-container:hover,
@@ -17,6 +16,10 @@
   opacity: 100%;
   transform: translateX(10px);
   color: var(--n-green);
+}
+
+.playlist-song-container {
+  transition: 0.1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
 }
 
 .song-image {

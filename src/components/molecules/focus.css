@@ -5,7 +5,7 @@
 .focus-container {
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 1s cubic-bezier(.17,.67,0,1.02);
+  animation: fadeInFocus 1s cubic-bezier(0.17, 0.67, 0, 1.02);
 }
 
 .focus-song {
@@ -16,7 +16,7 @@
   justify-content: center;
   background-color: #555;
 
-  width: 696px;
+  width: 100%;
 
   height: 510px;
   border-radius: 32px 32px 0px 32px;
@@ -30,7 +30,7 @@
   margin-top: 37px;
 
   display: flex;
-  width: 696px;
+  width: 100%;
   max-width: 100%;
   min-height: 233px;
   padding: 16px;
@@ -72,7 +72,15 @@
 .focus-link {
   font-size: 1.5rem;
   margin: 0;
+  background: var(--black);
+  padding: 8px 32px;
+  border-radius: 999px;
 
+  text-decoration: none;
+}
+
+.focus-link:hover,
+.focus-link:active {
   color: var(--n-green);
 }
 
@@ -82,7 +90,6 @@
   max-width: 100%;
   height: 70px;
   overflow-y: scroll;
-
 }
 
 .focus-desc > * {
@@ -125,13 +132,16 @@
     word-wrap: break-word;
   }
 
+  .focus-link {
+    font-size: 1rem;
+  }
+
   .focus-image-link {
     height: 200px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  
   .focus-song {
     justify-content: center;
     flex-direction: row;
@@ -168,16 +178,17 @@
     overflow: hidden;
     white-space: nowrap;
     animation: move 25s linear infinite;
-
   }
 
   .focus-desc {
     display: none;
-
   }
 
   .focus-link {
     font-size: 0.8rem;
+    padding: 0 1rem;
+    align-self: flex-end;
+    border-radius: 1rem 0 0 0;
   }
 }
 
@@ -191,13 +202,15 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInFocus {
   0% {
     opacity: 0;
     transform: translateX(100%);
+    filter: blur(1rem);
   }
 
   100% {
     transform: translateX(0);
+    filter: blur(0);
   }
 }

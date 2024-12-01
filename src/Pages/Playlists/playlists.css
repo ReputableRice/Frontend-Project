@@ -4,6 +4,7 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    animation: fadeInMasonry 1s cubic-bezier(.17,.67,0,1.02);
 }
 
 h1 {
@@ -41,3 +42,14 @@ h1 {
         margin: 0
     }
 }
+
+@keyframes fadeInMasonry {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }

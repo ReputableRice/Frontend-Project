@@ -6,13 +6,7 @@ import { useState } from 'react';
 
 export default function Playlists({ }) {
     //DO NOT CHANGE BODY AND CONTENT, MARGINS ARE DEFINED THERE
-    const breakpoints = {
-        default: 4,
-        1500: 3,
-        1100: 2,
-        700: 1,
-    }
-
+    const [load, setLoad] = useState(false)
     const [songs, setSongs] = useState(() => {
         const savedSongs = localStorage.getItem("song");
         const initialValue = savedSongs ? JSON.parse(savedSongs) : [];
@@ -20,19 +14,24 @@ export default function Playlists({ }) {
     });
 
     const error = songs.length > 0;
-    
+    const breakpoints = {
+        default: 4,
+        1500: 3,
+        1100: 2,
+        700: 1,
+    }
 
     return (
         <>
             <div className='content'>
-                <Masonry
-                    breakpointCols={breakpoints}
-                    className="my-masonry-grid"
-                    columnClassName="my-masonry-grid_column">
-                    {error ? songs.map((song, index) => (
-                        <Playlist key={index} artist={song} />
-                    )) : "error"}
-                </Masonry>
+                    <Masonry
+                        breakpointCols={breakpoints}
+                        className="my-masonry-grid"
+                        columnClassName="my-masonry-grid_column">
+                        {error ? songs.map((song, index) => (
+                            <Playlist key={index} artist={song} />
+                        )) : "error"}
+                    </Masonry>
             </div>
         </>
     )
