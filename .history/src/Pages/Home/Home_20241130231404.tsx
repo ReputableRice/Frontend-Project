@@ -121,6 +121,31 @@ export default function Home() {
         setEditingSong(null);
     };
 
+    const [playlist, setPlaylist] = useState([]);
+
+    useEffect(() => {
+        const savedPlaylist = localStorage.getItem("playlist");
+        if (savedPlaylist) {
+            setPlaylist(JSON.parse(savedPlaylist));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+    }, [playlist]);
+    
+    useEffect(() => {
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+    }, [playlist]);
+    
+    useEffect(() => {
+        const savedPlaylist = localStorage.getItem("playlist");
+        if (savedPlaylist) {
+            setPlaylist(JSON.parse(savedPlaylist));
+        }
+    }, []);
+    
+
     const ApplyFilters = () => {
         let updatedSongs = [...songs];
 
@@ -159,7 +184,7 @@ export default function Home() {
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit}  />
+                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>

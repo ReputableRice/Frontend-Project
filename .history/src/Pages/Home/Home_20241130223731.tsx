@@ -11,6 +11,7 @@ import EditSong from '../../components/templates/EditSong/EditSong';
 import Notification from '../../components/templates/Notification/Notification';
 import { BiFilter } from 'react-icons/bi';
 import { FaFilter } from 'react-icons/fa6';
+import Spotify from '../../components/templates/Spotify/Spotify';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -159,12 +160,15 @@ export default function Home() {
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit}  />
+                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>
                     <Focus selectedSong={selectedSong} />
                 </div>
+                <div style={{ marginTop: "20px" }}>
+                <Spotify />
+            </div>
             </div>
         </div>
     );

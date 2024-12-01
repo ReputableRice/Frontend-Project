@@ -159,7 +159,7 @@ export default function Home() {
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>
                     <div className='left-container'>
-                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit}  />
+                        <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
                     </div>
                 </div>
                 <div className='right-container'>

@@ -121,6 +121,31 @@ export default function Home() {
         setEditingSong(null);
     };
 
+    const [playlist, setPlaylist] = useState([]);
+
+    useEffect(() => {
+        const savedPlaylist = localStorage.getItem("playlist");
+        if (savedPlaylist) {
+            setPlaylist(JSON.parse(savedPlaylist));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+    }, [playlist]);
+    
+    useEffect(() => {
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+    }, [playlist]);
+    
+    useEffect(() => {
+        const savedPlaylist = localStorage.getItem("playlist");
+        if (savedPlaylist) {
+            setPlaylist(JSON.parse(savedPlaylist));
+        }
+    }, []);
+    
+
     const ApplyFilters = () => {
         let updatedSongs = [...songs];
 
