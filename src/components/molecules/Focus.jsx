@@ -35,7 +35,7 @@ export default function Focus({ selectedSong }) {
                             <h1 className='focus-item focus-title leading-6 mt-1'>{selectedSong.title}</h1>
                         </h1>
                         <div className='focus-item focus-wide flex'>
-                            <p className='focus-item focus-song-author focus-author leading-3 mt-8'>{selectedSong.author}</p>
+                            <p className='focus-item focus-song-author focus-author leading-6 mt-8'>{selectedSong.author}</p>
                             {/* <p className='focus-item focus-author focus-date'>{selectedSong.date}</p>*/}
                         </div>
                         <p className='focus-item focus-desc'>{selectedSong.song_desc}</p>

@@ -36,11 +36,11 @@ export default function Home() {
             },
             {
                 id: nanoid(),
-                title: 'jschlatt — A Very 1999 Christmas (Full Album)',
-                image_link: "https://i.ytimg.com/vi/hayoY2Ov8PM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCccpnkxaz6_w9igkfcX01UFCAlSQ",
-                author: "JSchlatt",
-                song_link: "https://www.youtube.com/watch?v=JjjNa8khhww",
-                song_desc: "MERRY CHRISTMAS BABY!!!!!!"
+                title: 'christmas lofi radio 🎄cozy beats to get festive to',
+                image_link: "https://i.ytimg.com/vi/pfiCNAc2AgU/sddefault.jpg?v=6728fa9a",
+                author: "Lofi Girl",
+                song_link: "https://www.youtube.com/watch?v=pfiCNAc2AgU",
+                song_desc: ""
             },
             {
                 id: nanoid(),
