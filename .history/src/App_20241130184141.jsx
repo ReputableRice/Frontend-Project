@@ -14,10 +14,12 @@ function App() {
   useEffect(() => {
     const navItems = document.querySelectorAll('.navBarCategories > *');
 
+    gsap.killTweensOf(navItems);
+
     gsap.fromTo(navItems, 
       {
         opacity: 0,
-        x: '-80rem',
+        x: -100,
       },
       {
         delay: 1,

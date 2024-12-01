@@ -12,22 +12,15 @@ function App() {
   const [mobileNav, setMobileNav] = useState(false);
 
   useEffect(() => {
-    const navItems = document.querySelectorAll('.navBarCategories > *');
+    const navItems = document.querySelectorAll('.navBarCategories');
 
-    gsap.fromTo(navItems, 
-      {
-        opacity: 0,
-        x: '-80rem',
-      },
-      {
-        delay: 1,
-        duration: 2,
-        opacity: 1,
-        x: 0,
-        stagger: 0.1,
-        ease: 'power4.out',
-      }
-    );
+    gsap.from(navItems, {
+      duration: 1,
+      opacity: 0,
+      x: -100, 
+      stagger: 0.1,
+      ease: 'power4.out',
+    });
   }, []);
 
   return (

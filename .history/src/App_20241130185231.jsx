@@ -15,10 +15,10 @@ function App() {
     const navItems = document.querySelectorAll('.navBarCategories > *');
 
     gsap.fromTo(navItems, 
-      {
-        opacity: 0,
-        x: '-80rem',
-      },
+      // {
+      //   opacity: 0,
+      //   x: '-80rem',
+      // },
       {
         delay: 1,
         duration: 2,

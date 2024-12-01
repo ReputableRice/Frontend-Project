@@ -59,29 +59,17 @@
     background: var(--n-green);
     width:0;
     height: 100%;
-    /* z-index: 0; */
 }
 
 .loader-black{
-    position: fixed;
+    position: absolute;
     top: -100%;
     width: 100%;
     height: 100%;
-    /* background-image: url("../../../../public/TURNTABLE.svg"); */
-    background-color: var(--black);
-    /* background-color: red; */
-    /* border: 20px solid red; */
+    /* background-image: url("../../../../public/App\ bg.png"); */
+    background-color: red;
+    z-index: 2;
     overflow: hidden;
-    z-index: 1;
-}
-
-.bgImgLoad {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    /* z-index: 0; */
 }
 
 .mane{

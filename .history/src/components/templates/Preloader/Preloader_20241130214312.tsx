@@ -94,6 +94,17 @@ export default function Preloader() {
                 ),
             });
 
+        gsap.to(".loading-screen", {
+            delay: 8.5,
+            background: "none",
+            opacity: 0,
+            duration: 0.1,
+            onComplete: () => {
+                // Navigate to App.jsx route
+                navigate("/");
+            },
+        });
+
         gsap.fromTo(
             ".loader-black",
             {
@@ -101,38 +112,25 @@ export default function Preloader() {
             },
             {
                 top: "0%",
-                delay: 6.3,
-                duration: 1,
+                delay: 6.7,
+                duration: 1.5,
                 ease: "power3.inOut",
             }
         );
 
-        gsap.to(".loading-screen", {
-            delay: 8.5,
-            // background: "none",
-            opacity: 0,
-            duration: 0.1,
-            onComplete: () => {
-                // Navigate to App.jsx route
-                navigate("/app");
-            },
+        gsap.to(".mane", {
+            yPercent: -50,
+            delay: 7.2,
+            duration: 1,
+            ease: "power3.inOut",
         });
-
-        // gsap.to(".mane", {
-        //     yPercent: -50,
-        //     delay: 7.2,
-        //     duration: 1,
-        //     ease: "power3.inOut",
-        // });
     }, [navigate]);
 
     return (
         <>
             <div className="loading-screen">
                 <div className="loader">
-                    <div className="loader-black">
-                        <img src="../../../../public/App bg.png" className="bgImgLoad"/>
-                    </div>
+                    <div className="loader-black"></div>
                     <div className="loader-1 bar"></div>
                 </div>
 
@@ -168,7 +166,6 @@ export default function Preloader() {
                     </div>
                 </div>
             </div>
-            
         </>
     );
 }

@@ -11,24 +11,30 @@ import gsap from 'gsap';
 function App() {
   const [mobileNav, setMobileNav] = useState(false);
 
-  useEffect(() => {
-    const navItems = document.querySelectorAll('.navBarCategories > *');
+  const animationPlayedRef = useRef(false); // Ref to check if animation has played
 
-    gsap.fromTo(navItems, 
-      {
-        opacity: 0,
-        x: '-80rem',
-      },
-      {
-        delay: 1,
-        duration: 2,
-        opacity: 1,
-        x: 0,
-        stagger: 0.1,
-        ease: 'power4.out',
-      }
-    );
-  }, []);
+  useEffect(() => {
+    if (!animationPlayedRef.current) {
+      const navItems = document.querySelectorAll('.navBarCategories > *');
+  
+      gsap.fromTo(navItems, 
+        {
+          opacity: 0,
+          x: -100,
+        },
+        {
+          delay: 1,
+          duration: 2,
+          opacity: 1,
+          x: 0,
+          stagger: 0.1,
+          ease: 'power4.out',
+        }
+      );
+
+      animationPlayedRef.current = true; // Ensure animation only runs once
+    }
+  }, []); // Empty dependency array ensures it runs only once on mount
 
   return (
     <div>

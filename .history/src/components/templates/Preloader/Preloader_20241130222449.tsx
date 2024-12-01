@@ -130,10 +130,11 @@ export default function Preloader() {
         <>
             <div className="loading-screen">
                 <div className="loader">
+                <div className="loader-1 bar"></div>
                     <div className="loader-black">
                         <img src="../../../../public/App bg.png" className="bgImgLoad"/>
                     </div>
-                    <div className="loader-1 bar"></div>
+                    
                 </div>
 
                 <div className="counter">

@@ -101,14 +101,14 @@ export default function Preloader() {
             },
             {
                 top: "0%",
-                delay: 6.3,
-                duration: 1,
+                delay: 6.7,
+                duration: 1.5,
                 ease: "power3.inOut",
             }
         );
 
         gsap.to(".loading-screen", {
-            delay: 8.5,
+            delay: 8,
             // background: "none",
             opacity: 0,
             duration: 0.1,
@@ -130,9 +130,7 @@ export default function Preloader() {
         <>
             <div className="loading-screen">
                 <div className="loader">
-                    <div className="loader-black">
-                        <img src="../../../../public/App bg.png" className="bgImgLoad"/>
-                    </div>
+                    <div className="loader-black"></div>
                     <div className="loader-1 bar"></div>
                 </div>
 
@@ -168,7 +166,7 @@ export default function Preloader() {
                     </div>
                 </div>
             </div>
-            
+            <img src="../../../../public/App bg.png" className="bgImgLoad"/>
         </>
     );
 }

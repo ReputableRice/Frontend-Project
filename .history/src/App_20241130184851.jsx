@@ -25,7 +25,7 @@ function App() {
         opacity: 1,
         x: 0,
         stagger: 0.1,
-        ease: 'power4.out',
+
       }
     );
   }, []);

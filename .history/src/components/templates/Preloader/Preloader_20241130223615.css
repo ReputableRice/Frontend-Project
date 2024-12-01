@@ -72,10 +72,11 @@
     /* background-color: red; */
     /* border: 20px solid red; */
     overflow: hidden;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .bgImgLoad {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;

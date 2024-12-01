@@ -14,11 +14,11 @@ function App() {
   useEffect(() => {
     const navItems = document.querySelectorAll('.navBarCategories > *');
 
-    gsap.fromTo(navItems, 
-      {
-        opacity: 0,
-        x: '-80rem',
-      },
+    gsap.from(navItems, 
+      // {
+      //   opacity: 0,
+      //   x: '-80rem',
+      // },
       {
         delay: 1,
         duration: 2,

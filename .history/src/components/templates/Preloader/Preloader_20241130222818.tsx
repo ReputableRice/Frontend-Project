@@ -130,6 +130,7 @@ export default function Preloader() {
         <>
             <div className="loading-screen">
                 <div className="loader">
+                    
                     <div className="loader-black">
                         <img src="../../../../public/App bg.png" className="bgImgLoad"/>
                     </div>

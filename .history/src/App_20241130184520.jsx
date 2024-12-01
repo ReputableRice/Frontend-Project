@@ -10,25 +10,34 @@ import gsap from 'gsap';
 
 function App() {
   const [mobileNav, setMobileNav] = useState(false);
+  const animationPlayedRef = useRef(false); // Ref to check if animation has played
 
   useEffect(() => {
-    const navItems = document.querySelectorAll('.navBarCategories > *');
+    // Ensure the DOM is ready before selecting elements
+    requestAnimationFrame(() => {
+      const navItems = document.querySelectorAll('.navBarCategories > *');
+      console.log(navItems); // Debugging log to check if elements are being selected
 
-    gsap.fromTo(navItems, 
-      {
-        opacity: 0,
-        x: '-80rem',
-      },
-      {
-        delay: 1,
-        duration: 2,
-        opacity: 1,
-        x: 0,
-        stagger: 0.1,
-        ease: 'power4.out',
+      // Only run the animation if elements are found
+      if (navItems.length > 0 && !animationPlayedRef.current) {
+        gsap.fromTo(navItems, 
+          {
+            opacity: 0,
+            x: -100,
+          },
+          {
+            delay: 1,
+            duration: 2,
+            opacity: 1,
+            x: 0,
+            stagger: 0.1,
+            ease: 'power4.out',
+          }
+        );
+        animationPlayedRef.current = true; // Ensure animation only runs once
       }
-    );
-  }, []);
+    });
+  }, []); // Empty dependency array ensures it runs only once on mount
 
   return (
     <div>

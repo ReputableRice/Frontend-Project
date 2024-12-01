@@ -16,8 +16,9 @@ function App() {
 
     gsap.fromTo(navItems, 
       {
+
         opacity: 0,
-        x: '-80rem',
+        x: -100,
       },
       {
         delay: 1,
