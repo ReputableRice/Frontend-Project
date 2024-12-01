@@ -4,11 +4,24 @@ import Contact from './Pages/Contact/Contact';
 import Playlists from './Pages/Playlists/Playlists';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaBars, FaX } from 'react-icons/fa6';
 
 function App() {
   const [mobileNav, setMobileNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
+
+  const handleResize = () => {
+    if (window.innerWidth < 820) {
+      setMobileNav(true)
+    } else {
+      setMobileNav(false)
+    }
+  }
+
 
   return (
     <div>

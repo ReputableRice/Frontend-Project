@@ -17,14 +17,19 @@ export default function Song({ handleSongClick, songs, deleteSong, handleEdit })
                         <div className='song-interaction'>
                             <a href={song.song_link} className='song-link' target="_blank" rel="noopener noreferrer">Listen</a>
                             <div className='flex song-icons'>
+                                <FaPencil
+                                    onClick={() => handleEdit(song)}
+                                    className='song-icon mt-auto m-0'
+                                    size={"1.5rem"}
+                                />
                                 <FaTrash
-                                    size={"1.2rem"}
-                                    className='icon mt-auto m-0'
+                                    size={"1.5rem"}
+                                    className='song-icon mt-auto m-0'
                                     onClick={(e) => {
                                         deleteSong(song.id);
                                     }}
                                 />
-                                <FaPencil onClick={() => handleEdit(song)} className='icon mt-auto m-0' />
+
                             </div>
                         </div>
                     </div>

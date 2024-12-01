@@ -94,6 +94,8 @@ export default function Home() {
 
     const handleEdit = (song) => {
         setEditingSong(song);
+        setAddSongOverlay(false)
+        setFilterOverlay(false)
     };
 
     const handleEditInput = (e) => {
@@ -125,6 +127,8 @@ export default function Home() {
 
     const toggleAddSong = () => {
         setAddSongOverlay(!addSongOverlay);
+        setFilterOverlay(false);
+        setEditingSong(null)
     };
 
     const closeEditSong = () => {
@@ -174,6 +178,8 @@ export default function Home() {
                             onClick={() => {
                                 setFilter("editing");
                                 setFilterOverlay(true);
+                                setAddSongOverlay(false);
+                                setEditingSong(null)
                             }} />
                         <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
                     </div>

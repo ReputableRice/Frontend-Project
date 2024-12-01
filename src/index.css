@@ -69,7 +69,7 @@ body .content {
   margin: 0 8.438vw;
 }
 
-p {
+p, label, input {
   font-family: Inter;
 }
 

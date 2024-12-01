@@ -75,7 +75,15 @@
 
 .song-icons {
   display: flex;
-  gap: 6px;
+  gap: 12px;
+}
+
+.song-icon {
+  transition: 0.1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
+}
+
+.song-icon:hover {
+  transform: scale(1.5);
 }
 
 
