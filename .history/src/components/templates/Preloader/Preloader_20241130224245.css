@@ -68,8 +68,9 @@
     width: 100%;
     height: 100%;
     /* background-image: url("../../../../public/TURNTABLE.svg"); */
-    background-image: url("/App bg.png");
-    background-size:cover;
+    background-color: var(--black);
+    /* background-color: red; */
+    /* border: 20px solid red; */
     overflow: hidden;
     z-index: 1;
 }
