@@ -6,7 +6,7 @@
   background-color: #555;
   border-radius: 16px 16px 0px 16px;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
 
   opacity: 75%;
   transition: 1s cubic-bezier(0.17, 0.67, 0.35, 0.89);
