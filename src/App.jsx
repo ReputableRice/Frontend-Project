@@ -28,7 +28,7 @@ function App() {
     <div>
       <div className='mobileNavTab'>
         <img src='/TURNTABLE.svg' className='w-64 m-auto' alt='Turntable logo' />
-        <FaBars size={"2rem"} onClick={() => setMobileCheck(true)} />
+        <FaBars size={"2rem"} onClick={() => setMobileCheck(true)} alt="navigation"/>
       </div>
       <div className='mobileNav flex items-center content-center'>
         {mobileNav && mobileCheck ? (
@@ -37,7 +37,7 @@ function App() {
               <div className='mobileNavTab'>
                 <FaX size={"2rem"} onClick={() => setMobileCheck(false)} />
               </div>
-              <Link to="." className={"appRouter navLeft"}>Home</Link>
+              <Link to="home" className={"appRouter navLeft"}>Home</Link>
               <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
               <Link to="about" className={"appRouter nav"}>About</Link>
               <Link to="contact" className={"appRouter navRight"}>Contact</Link>
@@ -47,7 +47,7 @@ function App() {
       </div>
       <div className='navBar desktopNav'>
         <div className='navBarCategories'>
-          <Link to="." className={"appRouter navLeft"}>Home</Link>
+          <Link to="home" className={"appRouter navLeft"}>Home</Link>
           <Link to="playlists" className={"appRouter nav"}>Playlists</Link>
           <Link to="about" className={"appRouter nav"}>About</Link>
           <Link to="contact" className={"appRouter navRight"}>Contact</Link>
@@ -55,7 +55,7 @@ function App() {
         </div>
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="playlists" element={<Playlists />} />
