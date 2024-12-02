@@ -13,6 +13,7 @@ import { BiFilter } from 'react-icons/bi';
 import { FaFilter } from 'react-icons/fa6';
 import ReactPlayer from 'react-player'
 import Disc from '../../components/molecules/disc/Disc';
+import Preloader from '../../components/templates/Preloader/Preloader';
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -52,7 +53,6 @@ export default function Home() {
             },
         ];
     });
-
     const [focus, setFocus] = useState(false)
 
     const [selectedSong, setSelectedSong] = useState(songs[0]);

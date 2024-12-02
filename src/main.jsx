@@ -8,11 +8,6 @@ import Home from "./Pages/Home/Home.tsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Preloader />} />
-        <Route path="/*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <App />
   </StrictMode>
 );
