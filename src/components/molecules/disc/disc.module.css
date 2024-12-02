@@ -1,7 +1,7 @@
 .discPosition {
     bottom: 50px;
     right: 100px;
-    animation: rotate 24s linear;
+    animation: rotate 10s linear;
 }
 
 @media only screen and (max-width: 820px) {
