@@ -69,6 +69,7 @@ export default function Home() {
     const [filter, setFilter] = useState(null)
     const [filteredSongs, setFilteredSongs] = useState(songs)
     const [filterOverlay, setFilterOverlay] = useState(false)
+    const [file, setFile] = useState()
 
     useEffect(() => {
         localStorage.setItem("song", JSON.stringify(songs));
@@ -173,19 +174,33 @@ export default function Home() {
                         closeFilter={closeFilter}
                     />}
                 {addSongOverlay && (
-                    <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
+                    <AddSong
+                        handleAddSong={handleAddSong}
+                        handleInputChange={handleInputChange}
+                        newSong={newSong}
+                        closeAddSong={toggleAddSong}
+                    />
                 )}
                 <div className='main-container'>
                     <div className='flex left-content'>
                         <div className='playlist-icons'>
-                            <FaFilter size={"2.5rem"} className='playlist-icon icon'
+                            <div
+                                onClick={toggleAddSong}
+                                className='flex flex-row-reverse justify-center items-center iconGroup'>
+                                <CgPlayListAdd size={"4rem"} className='playlist-icon icon' />
+                                <h3 className='iconHomeText'>Add Song</h3>
+                            </div>
+                            <div
                                 onClick={() => {
                                     setFilter("editing");
                                     setFilterOverlay(true);
                                     setAddSongOverlay(false);
                                     setEditingSong(null)
-                                }} />
-                            <CgPlayListAdd size={"4rem"} className='playlist-icon mt-3 icon' onClick={toggleAddSong} />
+                                }}
+                                className='flex flex-row-reverse justify-center items-center mt-3 iconGroup'>
+                                <FaFilter size={"2.5rem"} className='playlist-icon icon' />
+                                <h3 className='iconHomeText'>Filter</h3>
+                            </div>
                         </div>
                         <div className='left-container'>
                             <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />

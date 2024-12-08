@@ -45,12 +45,32 @@
     overflow: hidden;
 }
 
-.icon:hover {
-    color: var(--n-green);
-    transform: scale(1.1);
-    transition: transform 0.5s ease;
+.iconHomeText {
+    text-wrap: wrap;
+    text-align: left;
+    line-height: 16px;
+    width: 50px;
 }
 
+.iconGroup {
+    display: flex;
+    background-color: var(--black);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    max-height: 3rem;
+    color: var(--white);
+    transition: cubic-bezier(0.18, 0.69, 0.23, 0.99) 0.2s;
+}
+
+.iconGroup:hover {
+    background-color: var(--n-green);
+    color: var(--black);
+}
+
+.icon {
+    width: 4rem;
+    margin-left: 1rem;
+}
 
 
 @media only screen and (max-width:820px) {
@@ -89,8 +109,6 @@
         bottom: 1rem;
         right: 1rem;
     }
-
-
 
     .right-container {
         height: auto;
