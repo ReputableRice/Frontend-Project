@@ -84,9 +84,9 @@ html, body {
     padding: 20px;
 }
 
-.content p {
+/* .content p {
     margin-top: 10px;
-}
+} */
 .aboutGraphic {
     flex: 1;
     display: flex;

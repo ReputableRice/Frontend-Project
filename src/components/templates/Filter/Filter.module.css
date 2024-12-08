@@ -14,7 +14,8 @@
 
   position: absolute;
   z-index: 5;
-  margin-left: 4rem;
+  margin-left: 10rem;
+  margin-top: 4rem;
   animation: fadeIn 0.4s cubic-bezier(.17,.67,0,1.02);
 }
 
