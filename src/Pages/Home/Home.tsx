@@ -69,6 +69,7 @@ export default function Home() {
     const [filter, setFilter] = useState(null)
     const [filteredSongs, setFilteredSongs] = useState(songs)
     const [filterOverlay, setFilterOverlay] = useState(false)
+    const [file, setFile] = useState()
 
     useEffect(() => {
         localStorage.setItem("song", JSON.stringify(songs));
@@ -173,7 +174,12 @@ export default function Home() {
                         closeFilter={closeFilter}
                     />}
                 {addSongOverlay && (
-                    <AddSong handleAddSong={handleAddSong} handleInputChange={handleInputChange} newSong={newSong} closeAddSong={toggleAddSong} />
+                    <AddSong
+                        handleAddSong={handleAddSong}
+                        handleInputChange={handleInputChange}
+                        newSong={newSong}
+                        closeAddSong={toggleAddSong}
+                    />
                 )}
                 <div className='main-container'>
                     <div className='flex left-content'>

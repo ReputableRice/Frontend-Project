@@ -12,6 +12,7 @@
   position: absolute;
   z-index: 5;
   margin-top: 3rem;
+  margin-left: 10rem;
 
   filter: drop-shadow(0rem 0rem 10rem var(--black));
   animation: fadeIn 0.4s cubic-bezier(.17,.67,0,1.02);
