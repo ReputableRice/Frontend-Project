@@ -11,6 +11,7 @@ An app for storing and managing your favourite songs!
 - react-social-icons
 - local-storage
 - react-player
+- react-tooltip
 
 ## Breakpoints / Responsiveness
 - This app is responsive to the following points: 

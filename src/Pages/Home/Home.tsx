@@ -14,6 +14,7 @@ import { FaFilter } from 'react-icons/fa6';
 import ReactPlayer from 'react-player'
 import Disc from '../../components/molecules/disc/Disc';
 import Preloader from '../../components/templates/Preloader/Preloader';
+import { Tooltip } from 'react-tooltip'
 
 export default function Home() {
     const [songs, setSongs] = useState(() => {
@@ -184,23 +185,23 @@ export default function Home() {
                 <div className='main-container'>
                     <div className='flex left-content'>
                         <div className='playlist-icons'>
-                            <div
+                            <CgPlayListAdd
+                                size={"4rem"}
+                                className='playlist-icon icon'
+                                data-tooltip-id="my-tooltip" data-tooltip-content="Add a Song!"
                                 onClick={toggleAddSong}
-                                className='flex flex-row-reverse justify-center items-center iconGroup'>
-                                <CgPlayListAdd size={"4rem"} className='playlist-icon icon' />
-                                <h3 className='iconHomeText'>Add Song</h3>
-                            </div>
-                            <div
+                            />
+                            <FaFilter
+                                size={"2.5rem"}
+                                className='playlist-icon icon'
+                                data-tooltip-id="my-tooltip" data-tooltip-content="Filter"
                                 onClick={() => {
                                     setFilter("editing");
                                     setFilterOverlay(true);
                                     setAddSongOverlay(false);
                                     setEditingSong(null)
                                 }}
-                                className='flex flex-row-reverse justify-center items-center mt-3 iconGroup'>
-                                <FaFilter size={"2.5rem"} className='playlist-icon icon' />
-                                <h3 className='iconHomeText'>Filter</h3>
-                            </div>
+                            />
                         </div>
                         <div className='left-container'>
                             <Song handleSongClick={handleSongClick} songs={filteredSongs} deleteSong={deleteSong} handleEdit={handleEdit} />
@@ -211,6 +212,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Tooltip id="my-tooltip" />
         </div>
     );
 }
